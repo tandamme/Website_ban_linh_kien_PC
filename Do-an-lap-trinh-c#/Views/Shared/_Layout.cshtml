@@ -15,6 +15,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <style>
+    a { text-decoration: none !important; }
+
+    .navbar a:hover, .navbar .home-active {
+        background: var(--primary-color);
+        border-radius: 3rem;
+        color: var(--bg-color);
+        transition: background 0.5s;
+        text-decoration: none !important;
+    }
+
+
+
 .LogoLeft {
     display: flex;
     align-items: center;
@@ -91,6 +103,7 @@
         .profile-dropdown.active {
             display: block;
         }
+   
     </style>
 
     @RenderSection("Styles", required: false)
@@ -186,19 +199,19 @@
         </div>
         <div class="footer-box">
             <h2>Category</h2>
-            <a href="#">Combo PC</a>
-            <a href="#">Linh kiện rời</a>
-            <a href="#">Thiết bị ngoại vi</a>
-            <a href="#">Thiết bị mạng</a>
+            <a href="#">Combo PC</a> </br>
+            <a href="#">Linh kiện rời</a> </br>
+            <a href="#">Thiết bị ngoại vi</a></br>
+            <a href="#">Thiết bị mạng</a></br>
             <a href="#">Phụ kiện PC</a>
         </div>
 
         <div class="footer-box">
             <h2>Useful Link</h2>
-            <a href="#">Payment & Tax</a>
-            <a href="#">Điều khoản</a>
-            <a href="#">Blog</a>
-            <a href="#">Hoàn trả</a>
+            <a href="#">Payment & Tax</a> </br>
+            <a href="#">Điều khoản</a></br>
+            <a href="#">Blog</a></br>
+            <a href="#">Hoàn trả</a></br>
         </div>
 
         <div class="footer-box">
