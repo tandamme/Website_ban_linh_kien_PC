@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Contact Success";
+}
+
+<style>
+    :root {
+        --primary-color: #007BFF;
+        --secondary-color: #0056B3;
+        --accent-color: #00C8FF;
+        --bg-color: #F5F6FA;
+        --text-color: #212529;
+        --light-text-color: #6C757D;
+        --success-color: #28A745;
+        --fail-color: #DC3545;
+    }
+
+    body {
+        background: var(--bg-color);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .success-box {
+        width: 60%;
+        margin: 80px auto;
+        background: white;
+        padding: 40px 50px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0px 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .success-box h1 {
+        color: var(--success-color);
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .success-box p {
+        font-size: 18px;
+        color: var(--text-color);
+        margin: 10px 0;
+    }
+
+    .success-box a {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 12px 20px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .success-box a:hover {
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+</style>
+
+<div class="success-box">
+    <h1>🎉 Gửi thành công!</h1>
+
+    <p><strong>Họ và tên:</strong> @ViewBag.Name</p>
+    <p><strong>Email:</strong> @ViewBag.Email</p>
+
+    <p>Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi sẽ phản hồi trong thời gian sớm nhất!</p>
+
+    <a href="/Home/ContactUs">Quay lại trang liên hệ</a>
+</div>
+
