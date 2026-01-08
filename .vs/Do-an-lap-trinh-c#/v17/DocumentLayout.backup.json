@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\website_ban_linh_kien_pc\\do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\website_ban_linh_kien_pc\\do-an-lap-trinh-c#\\wwwroot\\css\\style1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\wwwroot\\css\\style1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\website_ban_linh_kien_pc\\do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\website_ban_linh_kien_pc\\do-an-lap-trinh-c#\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\website_ban_linh_kien_pc\\do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\website_ban_linh_kien_pc\\do-an-lap-trinh-c#\\wwwroot\\css\\style1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\wwwroot\\css\\style1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\website_ban_linh_kien_pc\\do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,32 +34,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml*",
-              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAwwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-08T04:59:44.595Z",
+              "WhenOpened": "2025-12-08T04:59:44.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Program.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Program.cs",
+              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Program.cs*",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Program.cs*",
+              "ViewState": "AgIAACYAAAAAAAAAAAAswDMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T04:55:33.113Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Program.cs",
-              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Program.cs",
-              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Program.cs",
-              "RelativeToolTip": "Do-an-lap-trinh-c#\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T04:55:33.113Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "style1.css",
               "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\wwwroot\\css\\style1.css",
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\wwwroot\\css\\style1.css",
@@ -71,13 +71,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "home.cshtml",
               "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Views\\Home\\home.cshtml",
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Home\\home.cshtml",
               "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Website_ban_linh_kien_PC\\Do-an-lap-trinh-c#\\Views\\Home\\home.cshtml",
               "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Home\\home.cshtml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAuwDAAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAAAP0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-08T04:37:27.194Z"
             }

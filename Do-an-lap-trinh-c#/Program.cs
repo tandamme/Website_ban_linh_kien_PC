@@ -1,3 +1,5 @@
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+
 namespace Do_an_lap_trinh_c_
 {
     public class Program
@@ -8,6 +10,17 @@ namespace Do_an_lap_trinh_c_
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // xác thực người dùng
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+            {
+                options.LoginPath = "/User/Login";
+                options.AccessDeniedPath = "/AccessDenied";
+                options.ReturnUrlParameter = "ReturnUrl";
+            });
+
+
 
             // ACTIVATE SESSION
             builder.Services.AddSession(options =>
@@ -34,8 +47,10 @@ namespace Do_an_lap_trinh_c_
             app.UseRouting(); 
             app.UseSession();
 
-
+            app.UseAuthentication();
             app.UseAuthorization();
+            
+
 
             app.MapControllerRoute(
                 name: "default",
