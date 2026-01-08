@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Do_an_lap_trinh_c_.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 
 namespace Do_an_lap_trinh_c_
 {
@@ -10,6 +12,13 @@ namespace Do_an_lap_trinh_c_
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            // cấu hình kết nối MySQL
+            var connectionString = builder.Configuration.GetConnectionString("MySqlConnection");
+
+            builder.Services.AddDbContext<AppDbContext>(options =>
+                options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
 
             // xác thực người dùng
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

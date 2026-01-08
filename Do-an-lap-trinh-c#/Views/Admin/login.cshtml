@@ -2,7 +2,7 @@
     ViewData["Title"] = "Login";
     Layout = null;
 }
-
+@model Do_an_lap_trinh_c_.ViewModels.LoginVM
 
 <!DOCTYPE html>
 <html>
@@ -25,18 +25,18 @@
     <div class="auth-box">
         <h2>Đăng nhập</h2>
 
-        <form>
-            <label>Email</label>
-            <input type="email" class="auth-input" placeholder="Nhập email">
+        <form asp-controller="User" asp-action="Login" method="post">
+            <label>Tên đăng nhập</label>
+            <input asp-for="userName" class="auth-input" placeholder="Nhập username" />
+            <span asp-validation-for="userName" class="text-danger"></span>
 
             <label>Mật khẩu</label>
-            <input type="password" class="auth-input" placeholder="Nhập mật khẩu">
+            <input asp-for="passWord" type="password" class="auth-input" placeholder="Nhập mật khẩu" />
+            <span asp-validation-for="passWord" class="text-danger"></span>
 
-            <form asp-controller="Home" asp-action="Home">
-                <button type="submit" class="auth-btn">Đăng nhập</button>
-            </form>
+            <button type="submit" class="auth-btn">Đăng nhập</button>
         </form>
-
+       
         <p class="auth-text">
             Chưa có tài khoản?
             <a asp-controller="Home" asp-action="Signup">Đăng ký ngay</a>

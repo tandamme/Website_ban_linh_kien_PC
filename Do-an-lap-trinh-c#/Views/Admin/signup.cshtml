@@ -3,6 +3,7 @@
     Layout = null;
 }
 
+@model Do_an_lap_trinh_c_.ViewModels.RegisterVM
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,18 +25,22 @@
     <div class="auth-box">
         <h2>Đăng ký</h2>
 
-        <form>
+        <form asp-controller="User" asp-action="Register" method="post">
             <label>Tên người dùng</label>
-            <input type="text" class="auth-input" placeholder="Nhập tên người dùng">
+            <input asp-for="userName" class="auth-input" placeholder="Nhập tên người dùng" />
+            <span asp-validation-for="userName" class="text-danger"></span>
 
             <label>Email</label>
-            <input type="email" class="auth-input" placeholder="Nhập email">
+            <input asp-for="email" type="email" class="auth-input" placeholder="Nhập email" />
+            <span asp-validation-for="email" class="text-danger"></span>
 
             <label>Mật khẩu</label>
-            <input type="password" class="auth-input" placeholder="Nhập mật khẩu">
+            <input asp-for="passWord" type="password" class="auth-input" placeholder="Nhập mật khẩu" />
+            <span asp-validation-for="passWord" class="text-danger"></span>
 
             <label>Nhập lại mật khẩu</label>
-            <input type="password" class="auth-input" placeholder="Xác nhận mật khẩu">
+            <input asp-for="rePassWord" type="password" class="auth-input" placeholder="Xác nhận mật khẩu" />
+            <span asp-validation-for="rePassWord" class="text-danger"></span>
 
             <button type="submit" class="auth-btn">Đăng ký</button>
         </form>

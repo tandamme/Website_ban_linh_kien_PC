@@ -20,4 +20,5 @@ namespace Do_an_lap_trinh_c_.ViewModels
         [Compare("passWord", ErrorMessage = "Password không khớp")]
         public string rePassWord { get; set; }
     }
+
 }
