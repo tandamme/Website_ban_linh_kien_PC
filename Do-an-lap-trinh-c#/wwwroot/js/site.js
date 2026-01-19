@@ -8,8 +8,7 @@ var swiper = new Swiper(".home", {
         prevEl: ".swiper-button-prev",
     },
 });
-
-let menu = document.querySelector('#menu-icon');
+let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
 menu.onclick = () => {

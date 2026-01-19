@@ -1,48 +1,63 @@
-﻿@{
+﻿@model Do_an_lap_trinh_c_.ViewModels.RegisterVM
+@{
     ViewData["Title"] = "Signup";
     Layout = null;
 }
 
-@model Do_an_lap_trinh_c_.ViewModels.RegisterVM
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
 
-    <!-- Import lại Bootstrap hoặc CSS của bạn -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-
-    <!-- Import file style chính -->
     <link rel="stylesheet" href="~/css/style1.css" />
-
-    <!-- Import icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 </head>
 
 <body>
 
-   <div class="auth-container">
+<div class="auth-container">
     <div class="auth-box">
         <h2>Đăng ký</h2>
 
-        <form asp-controller="User" asp-action="Register" method="post">
+        <form asp-controller="User" asp-action="Register" method="post" id="registerForm">
+
+            <!-- LỖI SERVER -->
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- USERNAME -->
+            <span asp-validation-for="userName"
+             id="userNameError"
+             class="text-danger"></span><br/>
             <label>Tên người dùng</label>
-            <input asp-for="userName" class="auth-input" placeholder="Nhập tên người dùng" />
-            <span asp-validation-for="userName" class="text-danger"></span>
+            <input asp-for="userName" class="auth-input" id="userName" />
+           
+          
 
+            <!-- EMAIL -->
+            <span asp-validation-for="email" id="emailError" class="text-danger"></span><br/>
             <label>Email</label>
-            <input asp-for="email" type="email" class="auth-input" placeholder="Nhập email" />
-            <span asp-validation-for="email" class="text-danger"></span>
+            <input asp-for="email" class="auth-input" id="email" />
+           
+            
 
+            <!-- PASSWORD -->
+            <span asp-validation-for="passWord" class="text-danger"></span></br>
             <label>Mật khẩu</label>
-            <input asp-for="passWord" type="password" class="auth-input" placeholder="Nhập mật khẩu" />
-            <span asp-validation-for="passWord" class="text-danger"></span>
+            <input asp-for="passWord" class="auth-input" id="passWord" />
+          
 
+            <!-- REPASSWORD -->
+            <span asp-validation-for="rePassWord"
+      id="passwordError"
+      class="text-danger"></span>
             <label>Nhập lại mật khẩu</label>
-            <input asp-for="rePassWord" type="password" class="auth-input" placeholder="Xác nhận mật khẩu" />
-            <span asp-validation-for="rePassWord" class="text-danger"></span>
+            <input asp-for="rePassWord" class="auth-input" id="rePassWord" />
+        
 
-            <button type="submit" class="auth-btn">Đăng ký</button>
+            <button type="submit" class="auth-btn" id="btnSubmit" disabled>
+                Đăng ký
+            </button>
         </form>
 
         <p class="auth-text">
@@ -52,8 +67,90 @@
     </div>
 </div>
 
+<!-- ================== SCRIPT ================== -->
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    // ==== CHECK ENABLE SUBMIT ====
+ function toggleSubmit() {
+    let hasEmpty = false;
+
+    $("#registerForm input").each(function () {
+        if ($(this).val().trim() === "") {
+            hasEmpty = true;
+        }
+    });
+
+    let hasError =
+        hasEmpty ||
+        $("#userNameError").text() !== "" ||
+        $("#emailError").text() !== "" ||
+        $("#passwordError").text() !== "";
+
+    $("#btnSubmit").prop("disabled", hasError);
+}
+
+    // ==== VALIDATE KHI BLUR ====
+  $("input").on("blur", function () {
+    $(this).valid();   
+    toggleSubmit();
+});
+
+    // ==== CHECK USERNAME AJAX ====
+    $("#userName").blur(function () {
+        let userName = $(this).val();
+        if (userName === "") return;
+
+        $.get("/User/CheckUsername", { userName }, function (res) {
+    $("#userNameError").text(res === "OK" ? "" : res);
+    toggleSubmit();
+});
+    });
+
+    // ==== CHECK EMAIL AJAX ====
+    $("#email").blur(function () {
+        let email = $(this).val();
+        if (email === "") return;
+
+    $.get("/User/CheckEmail", { email }, function (res) {
+    $("#emailError").text(res === "OK" ? "" : res);
+    toggleSubmit();
+});
+    });
+
+    // ==== CHECK PASSWORD MATCH ====
+function checkPasswordMatch() {
+    let pw = $("#passWord").val();
+    let re = $("#rePassWord").val();
+
+    if (re === "") {
+        $("#passwordError").text("");
+        return;
+    }
+
+    $("#passwordError").text(
+        pw !== re ? "Mật khẩu không khớp" : ""
+    );
+}
+
+    $("#passWord, #rePassWord").on("keyup blur", function () {
+        checkPasswordMatch();
+        toggleSubmit();
+    });
+
+});
+</script>
+
 </body>
 </html>
+
+
+
 
 
 <style>
@@ -117,4 +214,26 @@
         font-weight: 600;
     }
 
+
+    .auth-btn:disabled {
+    background-color: #adb5bd; /* xám */
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+    .auth-btn:not(:disabled) {
+    background-color: #28a745; /* xanh */
+}
+
+
 </style>
+
+  @* // validation
+  // 1. ajax - check username, email tồn tại, check password match (phía client)
+  // 2. validate ở phía server bằng DataAnnotation (bỏ trường trống, định dạng email, độ dài mật khẩu...) *@
+@*   Phần	Vai trò
+DataAnnotations	Validation backend
+AJAX	Trải nghiệm realtime
+JS	Kiểm soát submit
+Disable button	UX chuẩn
+Controller	Luật cuối *@

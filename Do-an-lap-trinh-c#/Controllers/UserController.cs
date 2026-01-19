@@ -118,5 +118,33 @@ namespace Do_an_lap_trinh_c_.Controllers
             await HttpContext.SignOutAsync();
             return RedirectToAction("Login");
         }
+
+        // ===== AJAX VALIDATION =====
+        [HttpGet]
+        public IActionResult CheckUsername(string userName)
+        {
+            var user = _context.Users
+                .FirstOrDefault(u => u.user_Name == userName);
+
+            if (user != null)
+                return Content("Tên đăng nhập đã tồn tại");
+
+            return Content("OK");
+        }
+
+        [HttpGet]
+        public IActionResult CheckEmail(string email)
+        {
+            var user = _context.Users
+                .FirstOrDefault(u => u.email == email);
+
+            if (user != null)
+                return Content("Email đã tồn tại");
+
+            return Content("OK");
+        }
+
+
+
     }
 }
