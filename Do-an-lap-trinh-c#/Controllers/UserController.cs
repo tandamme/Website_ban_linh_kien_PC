@@ -69,42 +69,47 @@ namespace Do_an_lap_trinh_c_.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM model, string? ReturnUrl)
         {
+            // 1. Check Required
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
+            // 2. Check username tồn tại hay chưa
             var user = _context.Users
                 .FirstOrDefault(u => u.user_Name == model.userName);
 
             if (user == null)
             {
-                ModelState.AddModelError("", "Username or password is incorrect");
+                ModelState.AddModelError(
+                    "userName",
+                    "Tên người dùng chưa được đăng ký"
+                );
                 return View(model);
             }
 
+            // 3. Check password
             string hashPassword =
                 MyUtils.ToMd5Hash(model.passWord, user.randomKey);
 
             if (user.passWord != hashPassword)
             {
-                ModelState.AddModelError("", "Username or password is incorrect");
+                ModelState.AddModelError(
+                    "passWord",
+                    "Mật khẩu không chính xác"
+                );
                 return View(model);
             }
 
-            // ===== Tạo CLAIMS =====
+            // 4. Đăng nhập thành công
             var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.user_Name),
-                new Claim(ClaimTypes.Email, user.email),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
-            };
+    {
+        new Claim(ClaimTypes.Name, user.user_Name),
+        new Claim(ClaimTypes.Email, user.email),
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+    };
 
-            var identity = new ClaimsIdentity(
-                claims,
-                "login"
-            );
-
+            var identity = new ClaimsIdentity(claims, "login");
             var principal = new ClaimsPrincipal(identity);
 
             await HttpContext.SignInAsync(principal);
@@ -132,6 +137,7 @@ namespace Do_an_lap_trinh_c_.Controllers
             return Content("OK");
         }
 
+
         [HttpGet]
         public IActionResult CheckEmail(string email)
         {
@@ -144,6 +150,37 @@ namespace Do_an_lap_trinh_c_.Controllers
             return Content("OK");
         }
 
+
+        // ===== CHECK USERNAME LOGIN =====
+        [HttpGet]
+        public IActionResult CheckLoginUsername(string userName)
+        {
+            var user = _context.Users
+                .FirstOrDefault(u => u.user_Name == userName);
+
+            if (user == null)
+                return Content("Tên người dùng chưa được đăng ký");
+
+            return Content("OK");
+        }
+
+        // ===== CHECK PASSWORD LOGIN =====
+        [HttpGet]
+        public IActionResult CheckLoginPassword(string userName, string passWord)
+        {
+            var user = _context.Users
+                .FirstOrDefault(u => u.user_Name == userName);
+
+            if (user == null)
+                return Content("Tên người dùng chưa được đăng ký");
+
+            string hash = MyUtils.ToMd5Hash(passWord, user.randomKey);
+
+            if (user.passWord != hash)
+                return Content("Mật khẩu không chính xác");
+
+            return Content("OK");
+        }
 
 
     }
