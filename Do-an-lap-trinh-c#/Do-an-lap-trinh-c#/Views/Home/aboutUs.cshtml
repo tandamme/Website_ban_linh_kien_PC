@@ -1,0 +1,233 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "About Us Page";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/style1.css" />
+}
+
+<style>
+
+/* Hero Banner */
+.hero {
+    width: 100%;
+    height: 350px;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('/img/about.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        animation: fadeIn 1s ease-out;
+    }
+
+/* Main container */
+.about-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* About card */
+.info-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    margin-bottom: 35px;
+    transition: 0.3s;
+    border-left: 6px solid var(--primary-color);
+}
+
+    .info-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+    }
+
+/* Section title */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 18px;
+    color: var(--secondary-color);
+}
+
+/* Values grid */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.value-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+    .value-box:hover {
+        transform: translateY(-6px) scale(1.03);
+        background: var(--accent-color);
+        color: #fff;
+    }
+
+/* Stats */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    background: var(--primary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.stat {
+    text-align: center;
+}
+
+    .stat h2 {
+        font-size: 2.4rem;
+        margin-bottom: 5px;
+    }
+
+/* Timeline */
+.timeline {
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+    .timeline-item::before {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: var(--secondary-color);
+        border-radius: 50%;
+        position: absolute;
+        left: -29px;
+        top: 5px;
+    }
+
+/* CTA */
+.cta-box {
+    padding: 25px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.cta-btn {
+    padding: 12px 25px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+    .cta-btn:hover {
+        background: white;
+        color: var(--secondary-color);
+    }
+
+
+</style>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>PC Store – Chất Lượng Tạo Niềm Tin</h1>
+</section>
+
+<div class="about-wrapper">
+
+    <!-- Intro -->
+    <div class="info-card">
+        <h2 class="section-title">🖥️ Chúng tôi là ai?</h2>
+        <p>
+            PC Store là một trong những cửa hàng uy tín hàng đầu về linh kiện máy tính, thiết bị mạng và
+            phụ kiện công nghệ tại Việt Nam. Chúng tôi mang đến giải pháp toàn diện cho người dùng từ cơ bản đến chuyên nghiệp.
+        </p>
+    </div>
+
+    <!-- Mission -->
+    <div class="info-card">
+        <h2 class="section-title">🎯 Sứ mệnh</h2>
+        <p>
+            Mang công nghệ lại gần hơn với mọi người bằng sản phẩm chính hãng, giá tốt, bảo hành nhanh
+            và dịch vụ tận tâm.
+        </p>
+    </div>
+
+    <!-- Values -->
+    <h2 class="section-title">💎 Giá trị cốt lõi</h2>
+    <div class="values-grid">
+        <div class="value-box">⚡ Tốc độ xử lý – giao hàng nhanh</div>
+        <div class="value-box">🔧 Kỹ thuật viên chuyên nghiệp</div>
+        <div class="value-box">❤️ Chăm sóc khách hàng tận tâm</div>
+        <div class="value-box">💼 Minh bạch và uy tín</div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-section">
+        <div class="stat">
+            <h2>15,000+</h2>
+            <p>Khách hàng</p>
+        </div>
+        <div class="stat">
+            <h2>20,000+</h2>
+            <p>Đơn hàng hoàn tất</p>
+        </div>
+        <div class="stat">
+            <h2>4.9★</h2>
+            <p>Đánh giá trung bình</p>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="info-card">
+        <h2 class="section-title">📅 Hành trình phát triển</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <strong>2020</strong> – PC Store chính thức hoạt động
+            </div>
+            <div class="timeline-item">
+                <strong>2022</strong> – Mở rộng sang thiết bị mạng & gaming gear
+            </div>
+            <div class="timeline-item">
+                <strong>2024</strong> – Đạt mốc 15.000 khách hàng
+            </div>
+            <div class="timeline-item">
+                <strong>2025</strong> – Ra mắt hệ thống website mới
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+        <h2>Khám phá sản phẩm ngay hôm nay!</h2>
+        <a href="/Home/Product" class="cta-btn">Xem sản phẩm</a>
+    </div>
+
+</div>
