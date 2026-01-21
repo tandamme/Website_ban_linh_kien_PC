@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|c:\\users\\pc\\source\\repos\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\admin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|c:\\users\\pc\\source\\repos\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|c:\\users\\pc\\source\\repos\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\admin\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\admin\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|c:\\users\\pc\\source\\repos\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\wwwroot\\css\\style1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\wwwroot\\css\\style1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|c:\\users\\pc\\source\\repos\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|c:\\users\\pc\\source\\repos\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "style1.css",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\wwwroot\\css\\style1.css",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\wwwroot\\css\\style1.css",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\wwwroot\\css\\style1.css",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\wwwroot\\css\\style1.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-20T11:23:43.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAALQAAAAAAAAAAAAAANQAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T07:00:02.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAJkAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T06:59:24.546Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T06:57:15.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "signup.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Admin\\signup.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Admin\\signup.cshtml",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Admin\\signup.cshtml*",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Admin\\signup.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T06:54:04.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Admin\\login.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Admin\\login.cshtml",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Admin\\login.cshtml*",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Admin\\login.cshtml*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-20T06:53:52.111Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
