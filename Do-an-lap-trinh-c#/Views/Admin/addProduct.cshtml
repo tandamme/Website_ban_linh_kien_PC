@@ -1,0 +1,222 @@
+﻿
+@{
+    Layout = null;
+    ViewData["Title"] = "Admin - Add Product";
+}
+
+<style>
+    body {
+        background: #f6f7fb;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .page-title {
+        text-align: left;
+        font-size: 26px;
+        font-weight: 700;
+        margin: 30px auto;
+        width: 90%;
+        color: #333;
+    }
+
+    /* === Wrapper === */
+    .product-wrapper {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        gap: 25px;
+    }
+
+    /* === Left Form === */
+    .form-section {
+        flex: 2;
+        background: #fff;
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    }
+
+    .form-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #222;
+    }
+
+    label {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control, select, textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 10px;
+        border: 1px solid #dcdfe6;
+        transition: 0.25s;
+        font-size: 15px;
+    }
+
+    .form-control:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #4a89ff;
+        box-shadow: 0 0 0 3px rgba(50, 110, 255, 0.15);
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    /* === Right Section (Image) === */
+    .image-section {
+        flex: 1;
+        background: #fff;
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+        text-align: center;
+    }
+
+    .image-section h4 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    #preview {
+        width: 100%;
+        max-width: 260px;
+        border-radius: 12px;
+        display: none;
+        margin: 15px auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .upload-box {
+        border: 2px dashed #c5c9d6;
+        padding: 20px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    .upload-box:hover {
+        background: #f0f4ff;
+        border-color: #7da6ff;
+    }
+
+    button {
+        background: #ff5722;
+        color: white;
+        padding: 16px;
+        border-radius: 12px;
+        width: 250px;
+        border: none;
+        font-size: 17px;
+        font-weight: 700;
+        margin-top: 25px;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    button:hover {
+        background: #e54b18;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(255, 87, 34, 0.3);
+    }
+
+</style>
+
+<h2 class="page-title">➕ Thêm Sản Phẩm Mới</h2>
+
+<div class="product-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="form-section">
+        <div class="form-title">Thông tin sản phẩm</div>
+
+        <form asp-action="AddProduct" method="post" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label>ID sản phẩm</label>
+                <input type="text" name="ProductId" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label>Tên sản phẩm</label>
+                <input type="text" name="ProductName" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label>Loại sản phẩm</label>
+                <select name="Category" class="form-control">
+                    <option>Combo PC</option>
+                    <option>Linh kiện rời</option>
+                    <option>Phụ kiện PC</option>
+                    <option>Thiết bị mạng</option>
+                    <option>Thiết bị ngoại vi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Giá tiền (VNĐ)</label>
+                <input type="number" name="Price" class="form-control" min="0" required />
+            </div>
+
+            <div class="form-group">
+                <label>Giảm giá (%)</label>
+                <input type="number" name="Discount" class="form-control" min="0" max="100" />
+            </div>
+
+            <div class="form-group">
+                <label>Hiệu suất</label>
+                <input type="text" name="Performance" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label>Mô tả sản phẩm</label>
+                <textarea name="Description" class="form-control"></textarea>
+            </div>
+
+            <button type="submit">Thêm Sản Phẩm</button>
+
+        </form>
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="image-section">
+        <h4>Ảnh sản phẩm</h4>
+
+        <label class="upload-box">
+            <span>Click để tải ảnh lên</span>
+            <input type="file" name="ImageFile" accept="image/*"
+                   onchange="previewImage(event)" style="display:none;" />
+        </label>
+
+        <img id="preview" />
+    </div>
+
+</div>
+
+<script>
+    function previewImage(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById("preview");
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = e => {
+                preview.src = e.target.result;
+                preview.style.display = "block";
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+</script>

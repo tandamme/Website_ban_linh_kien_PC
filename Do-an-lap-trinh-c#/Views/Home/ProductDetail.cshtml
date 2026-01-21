@@ -1,0 +1,53 @@
+﻿@model Do_an_lap_trinh_c_.Data.Product
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Product Detail";
+
+    var product = Model;
+    string priceFormatted = (product?.DonGia ?? 0).ToString("N0");
+    string category = product?.MaLoaiNavigation?.TenLoai ?? "Unknown";
+    string desc = string.IsNullOrEmpty(product?.MoTaChiTiet) ? product?.MoTaTomTat ?? "" : product?.MoTaChiTiet ?? "";
+
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/style1.css" />
+    <style>
+        .product-detail { display:flex; flex-wrap:wrap; gap:40px; margin:20px 0; justify-content:center; }
+        .product-detail img { max-width:400px; width:100%; border-radius:8px; }
+        .product-info { max-width:600px; display:flex; flex-direction:column; gap:10px; }
+        .product-info h1 { font-size:32px; margin-bottom:10px; }
+        .product-info h2 { color:#ff0000; margin:5px 0; }
+        .product-info span, .product-info p { display:block; margin:5px 0; line-height:1.5; }
+        .back-btn { margin-top:20px; display:inline-block; text-decoration:none; color:#fff; background:#333; padding:10px 20px; border-radius:5px; transition:0.3s; }
+        .back-btn:hover { background:#555; color:#fff; }
+    </style>
+}
+
+@if (product == null)
+{
+    <h2>Không tìm thấy sản phẩm!</h2>
+    <a href="@Url.Action("Product", "Home")" class="back-btn">Quay lại danh sách sản phẩm</a>
+}
+else
+{
+    <section class="product-detail">
+         <img src="~/images/san_pham/@product.Hinh"/>
+        <div class="product-info">
+            <h1>@product.TenSanPham</h1>
+            <h2>@priceFormatted VNĐ</h2>
+            @if (!string.IsNullOrEmpty(desc))
+            {
+                @desc
+            }
+            <span><strong>Danh mục:</strong> @category</span>
+            @if (product.NgayTao != null)
+            {
+                <span><strong>Ngày tạo:</strong> @product.NgayTao</span>
+            }
+            <a href="@Url.Action("Product", "Home")" class="back-btn">Quay lại danh sách sản phẩm</a>
+        </div>
+    </section>
+}
+
+<script src="~/js/site.js"></script>
