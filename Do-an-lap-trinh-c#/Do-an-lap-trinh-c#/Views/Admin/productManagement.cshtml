@@ -1,0 +1,249 @@
+﻿@{
+    ViewData["Title"] = "Product Management";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pm-container">
+
+    <!-- HEADER -->
+    <div class="pm-header">
+        <h2>Quản lý sản phẩm</h2>
+
+        <!-- NÚT THÊM SẢN PHẨM -->
+        <a asp-controller="Home" asp-action="AddProduct">
+            <span>➕</span> Thêm sản phẩm
+        </a>
+    </div>
+
+    <!-- SEARCH + FILTER -->
+    <div class="pm-filter">
+        <form method="get" class="filter-form">
+
+            <input type="text" name="search" class="filter-input"
+                   placeholder="Tìm kiếm sản phẩm...">
+
+            <select name="category" class="filter-select">
+                <option value="">Tất cả danh mục</option>
+                <option>Combo PC</option>
+                <option>Linh kiện rời</option>
+                <option>Phụ kiện PC</option>
+                <option>Thiết bị mạng</option>
+                <option>Thiết bị ngoại vi</option>
+            </select>
+
+            <input type="number" name="priceMin" class="filter-input short"
+                   placeholder="Giá min" step=1000>
+
+            <input type="number" name="priceMax" class="filter-input short"
+                   placeholder="Giá max" step=1000>
+
+            <button type="submit" class="btn-filter">Lọc</button>
+        </form>
+    </div>
+
+    <!-- TABLE -->
+    <div class="pm-table-container">
+        <table class="pm-table">
+            <thead>
+                <tr>
+                    <th>Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Damh mục</th>
+                    <th>Giá</th>
+                    <th>Giảm giá</th>
+                    <th>Hiệu suất</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><img src="~/img/combo-pc/cao-cap.jpg" class="pm-img" /></td>
+                    <td>PC Gaming i5 Gen 12</td>
+                    <td>Combo PC</td>
+                    <td>15.000.000</td>
+                    <td>10%</td>
+                    <td>Mạnh</td>
+                    <td><span class="status active">Đang bán</span></td>
+
+                    <td class="action-cell">
+                        <a asp-controller="Home" asp-action="EditProduct" class="btn-edit">Edit</a>
+
+                        <form asp-action="DeleteProduct" asp-route-id="1" method="post"
+                              style="display:inline-block"
+                              onsubmit="return confirm('Bạn chắc muốn xóa sản phẩm này?');">
+                            <button type="submit" class="btn-delete">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<style>
+    .pm-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* HEADER */
+    .pm-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .pm-header h2 {
+        font-weight: 600;
+        font-size: 24px;
+    }
+
+    /* BUTTON ADD */
+    .btn-add {
+        padding: 10px 16px;
+        background: #ee4d2d;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        box-shadow: 0 2px 5px rgba(238, 77, 45, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: 0.25s ease;
+    }
+
+    .btn-add:hover {
+        background: #d84326;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(238, 77, 45, 0.4);
+    }
+
+    /* FILTER BOX */
+    .pm-filter {
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    input[name="search"] {
+        width: 300px;
+    }
+
+
+    .filter-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .filter-input, .filter-select{
+        padding: 8px 10px;
+        border: 1px solid #dadada;
+        border-radius: 6px;
+        min-width: 180px;
+    }
+
+    .filter-input.short {
+        width: 120px;
+    }
+
+    .btn-filter {
+        padding: 8px 16px;
+        background: #007bff;
+        color: #fff;
+        border-radius: 6px;
+        border: none;
+    }
+
+    /* TABLE */
+    .pm-table-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .pm-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .pm-table th {
+        background: #f7f7f7;
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .pm-table td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+
+    .pm-img {
+        width: 55px;
+        height: 55px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .status {
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 5px;
+        color: #fff;
+    }
+
+    .status.active {
+        background: #28a745;
+    }
+
+    .status.inactive {
+        background: #6c757d;
+    }
+
+    /* EDIT + DELETE */
+    .action-cell {
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn-edit, .btn-delete {
+        padding: 6px 10px;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 13px;
+    }
+
+    .btn-edit {
+        background: #007bff;
+        border: none;
+    }
+
+    .btn-delete {
+        background: #dc3545;
+        border: none;
+    }
+
+    .btn-edit:hover {
+        background: #0069d9;
+    }
+
+    .btn-delete:hover {
+        background: #c82333;
+    }
+</style>
+

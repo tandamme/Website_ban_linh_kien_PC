@@ -1,0 +1,72 @@
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\appsettings.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.staticwebassets.runtime.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.staticwebassets.endpoints.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.exe
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.deps.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.runtimeconfig.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.dll
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.pdb
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.AssemblyInfo.cs
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.RazorAssemblyInfo.cache
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.RazorAssemblyInfo.cs
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\scopedcss\bundle\Do-an-lap-trinh-c#.styles.css
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\scopedcss\projectbundle\Do-an-lap-trinh-c#.bundle.scp.css
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.dll
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\refint\Do-an-lap-trinh-c#.dll
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.pdb
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.genruntimeconfig.cache
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\ref\Do-an-lap-trinh-c#.dll
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\PC\source\repos\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-la.BCDA209D.Up2Date
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\appsettings.Development.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\appsettings.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.staticwebassets.runtime.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.staticwebassets.endpoints.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.exe
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.deps.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.runtimeconfig.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.dll
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Do-an-lap-trinh-c#.pdb
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.csproj.AssemblyReference.cache
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.AssemblyInfoInputs.cache
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.AssemblyInfo.cs
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.csproj.CoreCompileInputs.cache
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.MvcApplicationPartsAssemblyInfo.cache
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.RazorAssemblyInfo.cache
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.RazorAssemblyInfo.cs
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\scopedcss\bundle\Do-an-lap-trinh-c#.styles.css
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\scopedcss\projectbundle\Do-an-lap-trinh-c#.bundle.scp.css
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.build.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.development.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\swae.build.ex.cache
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-la.BCDA209D.Up2Date
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.dll
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\refint\Do-an-lap-trinh-c#.dll
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.pdb
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\Do-an-lap-trinh-c#.genruntimeconfig.cache
+D:\C#\Website bán linh kiện PC (1)\Website bán linh kiện PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net8.0\ref\Do-an-lap-trinh-c#.dll
