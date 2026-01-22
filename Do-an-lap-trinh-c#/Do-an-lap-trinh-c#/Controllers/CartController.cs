@@ -26,10 +26,18 @@ namespace Do_an_lap_trinh_c_.Controllers
             }
             return cart;
         }
-        public IActionResult Index() {
-            var cart = GetCart();
+        public IActionResult Index()
+        {
+            var cart = HttpContext.Session
+                        .GetObject<List<CartItem>>(CartSessionKey); // ✅ ĐÚNG KEY
+
+            if (cart == null)
+                cart = new List<CartItem>();
+
             return View(cart);
         }
+
+
         public IActionResult AddtoCart(int id ,int quanlity =1)
         {
             var product = _context.Products.AsNoTracking().FirstOrDefault(p => p.MaSanPham == id);
@@ -138,6 +146,7 @@ namespace Do_an_lap_trinh_c_.Controllers
                 quantity = existing?.Quantity ?? req.Quantity
             });
         }
+     
 
         [HttpGet("/cart/items")]
         public IActionResult Items()
@@ -174,5 +183,18 @@ namespace Do_an_lap_trinh_c_.Controllers
         {
             public int ProductId { get; set; }
         }
+        public IActionResult CheckOut()
+        {
+            var cart = HttpContext.Session
+                        .GetObject<List<CartItem>>("Cart.Session");
+
+            if (cart == null)
+                cart = new List<CartItem>();
+
+            return View("~/Views/Cart/CheckOut.cshtml", cart);
+        }
+
+
+
     }
 }

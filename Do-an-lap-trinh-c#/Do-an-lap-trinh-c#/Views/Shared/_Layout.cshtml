@@ -143,24 +143,45 @@
        </ul>
 
         <!-- Profile -->
-        <div class="profile" id="profileMenu">
-            <img src="~/img/pfp.webp" alt="" />
-            <span>Nguyen Hoang Tan</span>
-            <i class='bx bx-caret-down'></i>
+        @{
+    var username = Context.Session.GetString("USERNAME");
+}
 
-            <!-- Dropdown -->
-            <ul class="profile-dropdown" id="profileDropdown">
-                <li><a asp-controller="Home" asp-action="ProductManagement">Admin</a></li>
-                <li><a asp-controller="Home" asp-action="Login">Đăng xuất</a></li>
-            </ul>
-        </div>
+@if (string.IsNullOrEmpty(username))
+{
+    <!-- CHƯA LOGIN -->
+    <a asp-controller="Home" asp-action="Login" class="btn-login">
+        <i class='bx bx-user'></i> Đăng nhập
+    </a>
+}
+else
+{
+    <!-- ĐÃ LOGIN -->
+    <div class="profile" id="profileMenu">
+        <img src="~/img/pfp.webp" alt="" />
+        <span>@username</span>
+        <i class='bx bx-caret-down'></i>
+
+        <ul class="profile-dropdown" id="profileDropdown">
+            <li><a asp-controller="Home" asp-action="ProductManagement">Admin</a></li>
+            <li>
+                <a asp-controller="Home" asp-action="Logout">
+                    Đăng xuất
+                </a>
+            </li>
+        </ul>
+    </div>
+}
+
         
 
         <!-- Cart -->
-        <a href="@Url.Action("Cart", "Home")" class="cart">
-            <i class='bx bx-shopping-bag'></i>
+        <a asp-controller="Cart" asp-action="Index" class="cart">
+     <i class='bx bx-shopping-bag'></i>
             <span class="cart-quantity"></span>
         </a>
+
+        
     </header>
    
     

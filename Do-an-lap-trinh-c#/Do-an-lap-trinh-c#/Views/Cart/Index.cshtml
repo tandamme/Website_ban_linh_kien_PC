@@ -8,13 +8,14 @@
 @using Do_an_lap_trinh_c_.Models
 @using Do_an_lap_trinh_c_.Extensions
 @using Do_an_lap_trinh_c_.Models
-@model IEnumerable<Do_an_lap_trinh_c_.Models.CartItem>
+@* @model IEnumerable<Do_an_lap_trinh_c_.Models.CartItem> *@
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Cart Page";
 
     
 }
+@model List<CartItem>
 
 <style>
     :root {
@@ -161,7 +162,15 @@
         Tổng cộng: <span id="cart-total">0</span> VNĐ
     </div>
 
-    <button id="checkout-btn" class="btn-qty" style="margin-top:15px;">Thanh toán</button>
+<a asp-controller="Cart"
+   asp-action="CheckOut"
+   class="btn-checkout">
+   Thanh toán
+</a>
+
+
+
+
 </div>
 
 <script>

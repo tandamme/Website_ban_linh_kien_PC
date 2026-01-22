@@ -14,7 +14,7 @@ let navbar = document.querySelector('.navbar');
 
 menu.onclick = () => {
     menu.classList.toggle('bx-x');
-    mavbar.classList.toggle('active');
+    navbar.classList.toggle('active');
 }
 
 window.onscroll = () => {

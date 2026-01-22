@@ -62,11 +62,12 @@
                         <span>@categoryName.ToUpper()</span>
                         <h2>@item.TenSanPham</h2>
                         <h3 class="price">@item.DonGia.ToString("N0") <span>VNĐ</span></h3>
-                       <button class="add-cart-btn" data-id="@item.MaSanPham">
-    <i class='bx bx-cart-alt'></i>
-</button>
+                      </a>
+                       <button  onclick="addToCart(@item.MaSanPham)">
+                             <i class='bx bx-cart-alt'></i>
+                        </button>
                         <i class='bx bx-heart'></i>
-                    </a>
+                  
                 </div>
             }
         }
@@ -147,22 +148,22 @@
 
 <script src="~/js/site.js"></script>
 <script>
-document.querySelectorAll('.add-cart-btn').forEach(btn => {
-    btn.addEventListener('click', function () {
-        const id = this.dataset.id;
-
-        fetch('/cart/add', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ productId: id, quantity: 1 })
+function addToCart(id){
+    fetch('/cart/add',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+            productId:id,
+            quantity:1
         })
-        .then(r => r.json())
-        .then(res => {
-            if (res.ok) {
-                alert("Đã thêm vào giỏ hàng!");
-            }
-        });
+    })
+    .then(r=>r.json())
+    .then(res=>{
+        if(res.ok){
+            alert("Đã thêm!");
+        }
     });
-});
+}
 </script>
+
 

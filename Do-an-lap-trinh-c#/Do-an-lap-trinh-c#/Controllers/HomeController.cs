@@ -1,4 +1,5 @@
-using Do_an_lap_trinh_c_.Data;
+﻿using Do_an_lap_trinh_c_.Data;
+using Do_an_lap_trinh_c_.Extensions;
 using Do_an_lap_trinh_c_.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -129,8 +130,12 @@ namespace Do_an_lap_trinh_c_.Controllers
         public IActionResult Notification() => View("~/Views/Home/notification.cshtml");
         public IActionResult AboutUs() => View("~/Views/Home/aboutUs.cshtml");
         public IActionResult ContactUs() => View("~/Views/Home/contactUs.cshtml");
-        public IActionResult Cart() => View("~/Views/Home/cart.cshtml");
-        public IActionResult CheckOut() => View("~/Views/Home/checkOut.cshtml");
+        public IActionResult Cart()
+        {
+            var cart = HttpContext.Session.GetObject<List<CartItem>>("Cart.Session");
+            return View("~/Views/Cart/Index.cshtml", cart);
+        }
+       // public IActionResult CheckOut() => View("~/Views/Home/checkOut.cshtml");
         public IActionResult AddProduct() => View("~/Views/Admin/addProduct.cshtml");
         public IActionResult EditProduct() => View("~/Views/Admin/editProduct.cshtml");
         public IActionResult ProductManagement() => View("~/Views/Admin/productManagement.cshtml");
@@ -146,6 +151,16 @@ namespace Do_an_lap_trinh_c_.Controllers
             ViewBag.Email = email;
             return View();
         }
+        //public IActionResult CheckOut()
+        //{
+        //    var cart = HttpContext.Session.GetObject<List<CartItem>>("Cart.Session");
+
+        //    if (cart == null || cart.Count == 0)
+        //        return RedirectToAction("Index", "Cart");
+
+        //    return View(cart); // Views/Home/CheckOut.cshtml
+        //}
+        
 
         public IActionResult CheckOutSuccess() => View("~/Views/Home/checkOutSuccess.cshtml");
 
