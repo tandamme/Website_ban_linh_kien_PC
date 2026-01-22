@@ -25,13 +25,7 @@ namespace Do_an_lap_trinh_c_
                 options.Cookie.IsEssential = true;
             });
 
-            // Register LinhkienpcContext (keep whatever provider you need)
-            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-            if (!string.IsNullOrEmpty(connectionString))
-            {
-                builder.Services.AddDbContext<LinhkienpcContext>(options =>
-                    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-            }
+    
 
             // ACTIVATE SESSION
             builder.Services.AddSession(options =>
