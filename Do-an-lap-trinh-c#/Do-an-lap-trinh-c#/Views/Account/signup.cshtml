@@ -1,0 +1,218 @@
+﻿
+@model Do_an_lap_trinh_c_.ViewModels.RegisterVM
+@{
+    ViewData["Title"] = "Signup";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Import lại Bootstrap hoặc CSS của bạn -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Import file style chính -->
+    <link rel="stylesheet" href="~/css/style1.css" />
+
+    <!-- Import icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+</head>
+
+<body>
+
+   <div class="auth-container">
+    <div class="auth-box">
+        <h2>Đăng ký</h2>
+
+        <form asp-controller="Account" asp-action="Register" method="post" id="registerForm">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <span asp-validation-for="HoTen" class="text-danger"></span><br/>
+    <label>Họ tên</label>
+    <input asp-for="HoTen" class="auth-input" id="HoTen" />
+    
+    <span asp-validation-for="TenDangNhap" id="TenDangNhapError" class="text-danger"></span><br/>
+    <label>Tên đăng nhập</label>
+    <input asp-for="TenDangNhap" class="auth-input" id="TenDangNhap" />
+
+    <span asp-validation-for="Email" id="EmailError" class="text-danger"></span></br/>
+    <label>Email</label>
+    <input asp-for="Email" class="auth-input" id="Email" />
+  
+    <span asp-validation-for="MatKhau" class="text-danger"></span></br/>
+    <label>Mật khẩu</label>
+    <input asp-for="MatKhau" type="password" class="auth-input" id="MatKhau" />
+  
+    <span asp-validation-for="XacNhanMatKhau" id="PasswordError" class="text-danger"></span><br/>
+    <label>Nhập lại mật khẩu</label>
+    <input asp-for="XacNhanMatKhau" type="password" class="auth-input" id="XacNhanMatKhau" />
+    
+
+    <button type="submit" class="auth-btn" id="btnSubmit" disabled>Đăng ký</button>
+</form>
+
+
+
+        <p class="auth-text">
+            Đã có tài khoản?
+            <a asp-controller="Account" asp-action="Login">Đăng nhập ngay</a>
+        </p>
+    </div>
+</div>
+
+<!-- ================== SCRIPT ================== -->
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+<script>
+$(document).ready(function () {
+
+    // ==== CHECK ENABLE SUBMIT ====
+ function toggleSubmit() {
+    let hasEmpty = false;
+
+    $("#registerForm input").each(function () {
+        if ($(this).val().trim() === "") {
+            hasEmpty = true;
+        }
+    });
+
+    let hasError =
+        hasEmpty ||
+        $("#TenDangNhapError").text() !== "" ||
+        $("#EmailError").text() !== "" ||
+        $("#PasswordError").text() !== "";
+
+    $("#btnSubmit").prop("disabled", hasError);
+}
+
+    // ==== VALIDATE KHI BLUR ====
+  $("input").on("blur", function () {
+    $(this).valid();   
+    toggleSubmit();
+});
+
+    // ==== CHECK USERNAME AJAX ====
+  $("#TenDangNhap").blur(function () {
+    let username = $(this).val();
+    if (username === "") return;
+
+    $.get("/Account/CheckUsername", { tenDangNhap: username }, function (res) {
+        $("#TenDangNhapError").text(res === "OK" ? "" : res);
+        toggleSubmit();
+    });
+});
+
+    // ==== CHECK EMAIL AJAX ====
+    $("#Email").blur(function () {
+    let email = $(this).val();
+    if (email === "") return;
+
+    $.get("/Account/CheckEmail", { email }, function (res) {
+        $("#EmailError").text(res === "OK" ? "" : res);
+        toggleSubmit();
+    });
+});
+
+    // ==== CHECK PASSWORD MATCH ====
+function checkPasswordMatch() {
+    let pw = $("#MatKhau").val();
+    let re = $("#XacNhanMatKhau").val();
+
+    if (re === "") {
+        $("#PasswordError").text("");
+        return;
+    }
+
+    $("#PasswordError").text(
+        pw !== re ? "Mật khẩu không khớp" : ""
+    );
+}
+
+$("#MatKhau, #XacNhanMatKhau").on("keyup blur", function () {
+    checkPasswordMatch();
+    toggleSubmit();
+});
+
+});
+</script>
+
+
+</body>
+</html>
+
+
+<style>
+    .auth-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f5f5f5;
+    }
+
+    .auth-box {
+        width: 360px;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        animation: fadeIn 0.3s ease;
+    }
+
+    .auth-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .auth-input {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+    }
+
+    .auth-btn {
+        width: 100%;
+        padding: 10px;
+        background: #28a745;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .auth-btn:hover {
+        background: #218838;
+    }
+
+    .auth-text {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .auth-text a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+     .auth-btn:disabled {
+    background-color: #adb5bd; /* xám */
+    cursor: not-allowed;
+    opacity: 0.8;
+
+</style>

@@ -1,0 +1,208 @@
+﻿@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+@model Do_an_lap_trinh_c_.ViewModels.LoginVM
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Import lại Bootstrap hoặc CSS của bạn -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Import file style chính -->
+    <link rel="stylesheet" href="~/css/style1.css" />
+
+    <!-- Import icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+</head>
+
+<body>
+
+    <div class="auth-container">
+    <div class="auth-box">
+        <h2>Đăng nhập</h2>
+
+        <form asp-controller="Account"
+      asp-action="Login"
+      method="post"
+      id="loginForm">
+
+    <input type="hidden" name="ReturnUrl" value="@ViewBag.ReturnUrl" />
+
+    <!-- SERVER ERROR -->
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <!-- USERNAME -->
+    <span asp-validation-for="TenDangNhap"
+          id="userNameError"
+          class="text-danger"></span>
+    <label>Tên đăng nhập</label>
+    <input asp-for="TenDangNhap"
+           id="TenDangNhap"
+           class="auth-input" />
+
+    <!-- PASSWORD -->
+    <span asp-validation-for="MatKhau"
+          id="passwordError"
+          class="text-danger"></span></br>
+    <label>Mật khẩu</label>
+    <input asp-for="MatKhau"
+           id="MatKhau"
+           type="password"
+           class="auth-input" />
+
+    <button type="submit"
+            class="auth-btn"
+            id="btnSubmit"
+            disabled>
+        Đăng nhập
+    </button>
+</form>
+
+
+        <p class="auth-text">
+            Chưa có tài khoản?
+            <a asp-controller="Account" asp-action="Register">Đăng ký ngay</a>
+        </p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    // ENABLE / DISABLE SUBMIT
+   function toggleSubmit() {
+    let hasEmpty = false;
+
+    $("#TenDangNhap, #MatKhau").each(function () {
+        if ($(this).val().trim() === "") {
+            hasEmpty = true;
+        }
+    });
+
+    let hasError =
+        hasEmpty ||
+        $("#userNameError").text().trim() !== "" ||
+        $("#passwordError").text().trim() !== "";
+
+    $("#btnSubmit").prop("disabled", hasError);
+}
+
+    // VALIDATE KHI BLUR
+    $("input").on("blur", function () {
+        $(this).valid();
+        toggleSubmit();
+    });
+
+    // CHECK USERNAME
+    $("#TenDangNhap").blur(function () {
+        let tenDangNhap = $(this).val();
+        if (tenDangNhap === "") return;
+
+        $.get("/Account/CheckLoginUsername",
+            { tenDangNhap: tenDangNhap },
+            function (res) {
+                $("#userNameError").text(res === "OK" ? "" : res);
+                toggleSubmit();
+            });
+    });
+
+    // CHECK PASSWORD
+    $("#MatKhau").blur(function () {
+        let tenDangNhap = $("#TenDangNhap").val();
+        let matKhau = $(this).val();
+
+        if (tenDangNhap === "" || matKhau === "") return;
+
+        $.get("/Account/CheckLoginPassword",
+            { tenDangNhap: tenDangNhap, matKhau: matKhau },
+            function (res) {
+                $("#passwordError").text(res === "OK" ? "" : res);
+                toggleSubmit();
+            });
+    });
+
+});
+</script>
+
+
+</body>
+</html>
+
+<style>
+    .auth-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f5f5f5;
+    }
+
+    .auth-box {
+        width: 360px;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        animation: fadeIn 0.3s ease;
+    }
+
+    .auth-box h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .auth-input {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 15px;
+    }
+
+    .auth-btn {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .auth-btn:hover {
+        background: #0069d9;
+    }
+
+    .auth-text {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .auth-text a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+      .auth-btn:disabled {
+    background-color: #adb5bd; /* xám */
+    cursor: not-allowed;
+    opacity: 0.8;
+</style>
+
+   /*        validation
+   1. ajax - check username, email tồn tại, check password match (phía client)
+   2. validate ở phía server bằng DataAnnotation (bỏ trường trống, định dạng email, độ dài mật khẩu...) */
