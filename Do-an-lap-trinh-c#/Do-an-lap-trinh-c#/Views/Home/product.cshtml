@@ -1,0 +1,169 @@
+﻿@model IEnumerable<Do_an_lap_trinh_c_.Data.Product>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Products";
+
+    // read query string values (kept for UI)
+    string category = Context.Request.Query["category"];
+    string search = Context.Request.Query["search"];
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/style1.css" />
+}
+
+<style>
+    .products-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; justify-items: center; padding: 20px 0; }
+    .products-container .box { width: 250px; max-width: 100%; }
+    .search-row { display:flex; gap:8px; justify-content:center; margin:12px 0; }
+    .search-row input { padding:8px 12px; border-radius:6px; border:1px solid #ddd; width:360px; }
+    .search-row button { padding:8px 12px; border-radius:6px; border:none; background:#0d6efd; color:#fff; cursor:pointer; }
+</style>
+
+<!--FILTER & SEARCH-->
+<section class="filter-bar">
+    <div class="heading">
+        <h1>Tìm kiếm & <br><span>Lọc sản phẩm</span></h1>
+    </div>
+
+    <div class="search-row" role="search">
+        <input id="product-search" type="text" name="search" placeholder="Tìm tên sản phẩm hoặc tên loại..." value="@search" />
+        <button id="product-search-btn" type="button">Search</button>
+    </div>
+
+    <div class="category-filter">
+        <a href="/Home/product" class="btn">Tất cả</a>
+        <a href="/Home/product?category=combo-pc" class="btn">Combo PC</a>
+        <a href="/Home/product?category=phu-kien-pc" class="btn">Phụ kiện PC</a>
+        <a href="/Home/product?category=linh-kien-roi" class="btn">Linh kiện rời</a>
+        <a href="/Home/product?category=thiet-bi-mang" class="btn">Thiết bị mạng</a>
+        <a href="/Home/product?category=thiet-bi-ngoai-vi" class="btn">Thiết bị ngoại vi</a>
+    </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-page">
+    <div class="heading">
+        <h1>Danh sách <br> <span>Sản phẩm</span></h1>
+    </div>
+
+    <div id="products-container" class="products-container">
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                var imgUrl = string.IsNullOrEmpty(item.Hinh)
+                    ? Url.Content("~/img/no-image.png")
+                    : (item.Hinh.StartsWith("~") ? Url.Content(item.Hinh) : Url.Content($"~/images/san_pham/{item.Hinh}"));
+                var categoryName = item.MaLoaiNavigation?.TenLoai ?? "Unknown";
+                <div class="box">
+                    <a href="@Url.Action("ProductDetail", "Home", new { id = item.MaSanPham })">
+                       <img src="~/images/san_pham/@item.Hinh"  />
+                        <span>@categoryName.ToUpper()</span>
+                        <h2>@item.TenSanPham</h2>
+                        <h3 class="price">@item.DonGia.ToString("N0") <span>VNĐ</span></h3>
+                      </a>
+                       <button  onclick="addToCart(@item.MaSanPham)">
+                             <i class='bx bx-cart-alt'></i>
+                        </button>
+                        <i class='bx bx-heart'></i>
+                  
+                </div>
+            }
+        }
+        else
+        {
+            <h2 style="padding: 20px; text-align:center;">Không tìm thấy sản phẩm phù hợp!</h2>
+        }
+    </div>
+</section>
+
+@section Scripts {
+<script>
+(function () {
+    const input = document.getElementById('product-search');
+    const btn = document.getElementById('product-search-btn');
+    const container = document.getElementById('products-container');
+    const initialHtml = container.innerHTML;
+    let timer = 0;
+
+    function escapeHtml(s) {
+        return (s || '').replace(/[&<>"']/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]; });
+    }
+    function numberWithCommas(x) {
+        if (x == null) return '';
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+    }
+
+    function renderProducts(items) {
+        if (!items || items.length === 0) {
+            container.innerHTML = '<h2 style="padding:20px;text-align:center">Không tìm thấy sản phẩm phù hợp!</h2>';
+            return;
+        }
+
+        const html = items.map(p => {
+            const img = p.image || '/img/no-image.png';
+            const category = p.category || '';
+            return `<div class="box">
+                <a href="${p.detailUrl}">
+                    <img src="${img}" alt="${escapeHtml(p.name)}" />
+                    <span>${escapeHtml(category)}</span>
+                    <h2>${escapeHtml(p.name)}</h2>
+                    <h3 class="price">${numberWithCommas(p.price)} <span>VNĐ</span></h3>
+                    <i class='bx bx-cart-alt'></i>
+                    <i class='bx bx-heart'></i>
+                </a>
+            </div>`;
+        }).join('');
+        container.innerHTML = html;
+    }
+
+    function doSearch(q) {
+        if (!q || q.trim().length === 0) {
+            container.innerHTML = initialHtml;
+            return;
+        }
+        fetch(`/api/products/search?term=${encodeURIComponent(q)}`)
+            .then(r => { if (!r.ok) throw new Error('Network response was not ok'); return r.json(); })
+            .then(data => renderProducts(data))
+            .catch(err => {
+                console.error('Search error', err);
+                container.innerHTML = '<h2 style="padding:20px;text-align:center">Lỗi khi tìm kiếm. Kiểm tra console.</h2>';
+            });
+    }
+
+    input.addEventListener('input', function () {
+        clearTimeout(timer);
+        const q = input.value;
+        timer = setTimeout(() => doSearch(q), 300);
+    });
+
+    btn.addEventListener('click', function () {
+        clearTimeout(timer);
+        doSearch(input.value);
+    });
+})();
+</script>
+}
+
+<script src="~/js/site.js"></script>
+<script>
+function addToCart(id){
+    fetch('/cart/add',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+            productId:id,
+            quantity:1
+        })
+    })
+    .then(r=>r.json())
+    .then(res=>{
+        if(res.ok){
+            alert("Đã thêm!");
+        }
+    });
+}
+</script>
+
+
