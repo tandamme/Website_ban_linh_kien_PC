@@ -120,8 +120,17 @@ public class AccountController : Controller
         user.NgayDangNhapCuoi = DateOnly.FromDateTime(DateTime.Now);
         _context.SaveChanges();
 
+        // PHÂN LUỒNG
+        if (user.MaLoaiNguoiDung == 0)
+        {
+            return RedirectToAction("Index", "Admin");
+        }
+
+        // CHỈ user thường mới dùng ReturnUrl
         if (!string.IsNullOrEmpty(ReturnUrl))
+        {
             return Redirect(ReturnUrl);
+        }
 
         return RedirectToAction("Home", "Home");
     }
