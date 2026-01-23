@@ -17,63 +17,57 @@ public class OrderController : Controller
 
     [HttpPost]
     public IActionResult PlaceOrder(CheckoutVM model)
-{
-    if (!ModelState.IsValid)
-        return RedirectToAction("CheckOut", "Cart");
-
-    var cart = HttpContext.Session.GetObject<List<CartItem>>("Cart.Session");
-    if (cart == null || cart.Count == 0)
-        return RedirectToAction("Index", "Cart");
-
-    var customer = new Customer
     {
-        TenKhachHang = model.FullName,
-        Email = model.Email,
-        DienThoai = model.Phone,
-        DiaChi = model.Address
-    };
+        var userId = HttpContext.Session.GetInt32("UserId");
+        if (userId == null)
+            return RedirectToAction("Login", "Account");
 
-    _context.Customers.Add(customer);
-    _context.SaveChanges();
+        var cart = HttpContext.Session.GetObject<List<CartItem>>("Cart.Session");
+        if (cart == null || cart.Count == 0)
+            return RedirectToAction("Index", "Cart");
 
-    decimal total = cart.Sum(x => x.Price * x.Quantity);
+        double total = cart.Sum(x => x.Price * x.Quantity);
 
-        var bill = new Bill
+        // 1️⃣ TẠO ĐƠN HÀNG CHO USER
+        var billUser = new Billuser
         {
-            MaKhachHang = customer.MaKhachHang,
             NgayHd = DateOnly.FromDateTime(DateTime.Now),
-            TriGia = (double)total
+            MaUser = userId.Value,      // ✅ ĐÚNG TÊN
+            TriGia = total,
+            TrangThai = 0,              // 0 = chờ xử lý
+            DiaChi = model.Address
         };
 
+        _context.Billusers.Add(billUser);
+        _context.SaveChanges();
 
-        _context.Bills.Add(bill);
-    _context.SaveChanges();
-
-    foreach (var item in cart)
-    {
-        _context.Infobills.Add(new Infobill
+        // 2️⃣ CHI TIẾT ĐƠN HÀNG
+        foreach (var item in cart)
         {
-            SoHoaDon = bill.SoHoaDon,
-            MaSanPham = item.ProductId,
-            SoLuong = item.Quantity,
-            DonGia = item.Price
-        });
-    }
+            _context.Infobillusers.Add(new Infobilluser
+            {
+                SoHoaDon = billUser.SoHoaDon,
+                MaSanPham = item.ProductId,
+                SoLuong = item.Quantity,
+                DonGia = item.Price
+            });
+        }
 
-    _context.SaveChanges();
+        _context.SaveChanges();
 
-        SendMail(model.Email, bill.SoHoaDon, cart, (double)total);
+        // 3️⃣ GỬI MAIL
+        var user = _context.Users.Find(userId.Value);
+        if (!string.IsNullOrEmpty(user?.Email))
+        {
+            SendMail(user.Email, billUser.SoHoaDon, cart, total);
+        }
 
         HttpContext.Session.Remove("Cart.Session");
 
-        // TempData để hiển thị trang success
-        TempData["FullName"] = model.FullName;
-        TempData["Email"] = model.Email;
-        TempData["PaymentMethod"] = model.PaymentMethod ?? "Thanh toán khi nhận hàng";
-
-        return RedirectToAction("CheckSuccess", new { id = bill.SoHoaDon });
-
+        return RedirectToAction("CheckSuccess", new { id = billUser.SoHoaDon });
     }
+
+
 
 
 
