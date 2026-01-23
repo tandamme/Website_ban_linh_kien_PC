@@ -3,32 +3,68 @@
   "WorkspaceRootPath": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\do-an-lap-trinh-c#.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\order\\checksuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\order\\checksuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\data\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\data\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\order\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\order\\myorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\data\\infobilluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\data\\infobilluser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\data\\billuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\data\\billuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\data\\infobill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\data\\infobill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\data\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\data\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\do-an-lap-trinh-c#.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\data\\linhkienpccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\data\\linhkienpccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\views\\account\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\linhkienpc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -58,7 +94,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,28 +106,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Bill.cs",
-              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Bill.cs",
-              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\Bill.cs",
-              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Bill.cs",
-              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\Bill.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T03:04:44.271Z",
+              "DocumentIndex": 1,
+              "Title": "CheckSuccess.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Order\\CheckSuccess.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Order\\CheckSuccess.cshtml",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Order\\CheckSuccess.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Order\\CheckSuccess.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAFAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T12:37:50.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "profile.cshtml",
-              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\profile.cshtml",
-              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Account\\profile.cshtml",
-              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\profile.cshtml",
-              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Account\\profile.cshtml",
-              "ViewState": "AgIAACMAAAAAAAAAAAAowDwAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Order\\Details.cshtml",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Order\\Details.cshtml*",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Order\\Details.cshtml*",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwCoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T02:31:58.533Z"
+              "WhenOpened": "2026-01-23T12:25:12.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyOrders.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Order\\MyOrders.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Order\\MyOrders.cshtml",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Order\\MyOrders.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Order\\MyOrders.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T12:23:03.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Controllers\\OrderController.cs",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAnwFEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T08:45:52.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Infobilluser.cs",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Infobilluser.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\Infobilluser.cs",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Infobilluser.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\Infobilluser.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T08:44:38.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Infobill.cs",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Infobill.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\Infobill.cs",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Infobill.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\Infobill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T08:44:20.239Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -101,37 +190,66 @@
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKwAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAYwA0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T01:58:57.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "login.cshtml",
-              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\login.cshtml",
-              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Account\\login.cshtml",
-              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\login.cshtml",
-              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Account\\login.cshtml",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T01:57:18.36Z"
+              "WhenOpened": "2026-01-23T08:42:54.001Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "signup.cshtml",
-              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\signup.cshtml",
-              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Account\\signup.cshtml",
-              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\signup.cshtml",
-              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Account\\signup.cshtml",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAAGcAAAAhAAAAAAAAAA==",
+              "Title": "home.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Home\\home.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Home\\home.cshtml",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Home\\home.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Home\\home.cshtml",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAIwMYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T01:57:20.893Z"
+              "WhenOpened": "2026-01-23T08:40:32.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Billuser.cs",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Billuser.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\Billuser.cs",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Billuser.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\Billuser.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T03:04:39.243Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Bill.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\Bill.cs",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Bill.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\Bill.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAswAsAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T03:04:44.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\User.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\User.cs",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\User.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\User.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T02:37:58.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Controllers\\AccountController.cs",
@@ -139,61 +257,103 @@
               "RelativeToolTip": "Do-an-lap-trinh-c#\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAJ4AAAAAAAAAAAAowMcAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T01:52:30.617Z"
+              "WhenOpened": "2026-01-23T01:52:30.617Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 17,
+              "Title": "signup.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\signup.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Account\\signup.cshtml",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\signup.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Account\\signup.cshtml",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAAGcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T01:57:20.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Program.cs",
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Program.cs",
               "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Program.cs",
               "RelativeToolTip": "Do-an-lap-trinh-c#\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-23T01:55:30.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\appsettings.json",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\appsettings.json",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\appsettings.json",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-23T08:32:15.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LinhkienpcContext.cs",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\LinhkienpcContext.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\LinhkienpcContext.cs",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\LinhkienpcContext.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\LinhkienpcContext.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T08:32:24.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Do-an-lap-trinh-c#.csproj",
               "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
               "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
               "RelativeToolTip": "Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswBUAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-01-23T01:53:21.146Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\User.cs",
-              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\User.cs",
-              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\User.cs",
-              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\User.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAuwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T02:37:58.879Z"
+              "DocumentIndex": 16,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\login.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Account\\login.cshtml",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\login.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Account\\login.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T01:57:18.36Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Billuser.cs",
-              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Billuser.cs",
-              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Data\\Billuser.cs",
-              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Data\\Billuser.cs",
-              "RelativeToolTip": "Do-an-lap-trinh-c#\\Data\\Billuser.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T03:04:39.243Z"
+              "DocumentIndex": 15,
+              "Title": "profile.cshtml",
+              "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\profile.cshtml",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Views\\Account\\profile.cshtml",
+              "ToolTip": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Views\\Account\\profile.cshtml",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Views\\Account\\profile.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAowDwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T02:31:58.533Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "LoginVM.cs",
               "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\ViewModels\\LoginVM.cs",
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\ViewModels\\LoginVM.cs",
@@ -201,11 +361,12 @@
               "RelativeToolTip": "Do-an-lap-trinh-c#\\ViewModels\\LoginVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T01:53:43.281Z"
+              "WhenOpened": "2026-01-23T01:53:43.281Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "RegisterVM.cs",
               "DocumentMoniker": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\ViewModels\\RegisterVM.cs",
               "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\ViewModels\\RegisterVM.cs",
@@ -213,7 +374,8 @@
               "RelativeToolTip": "Do-an-lap-trinh-c#\\ViewModels\\RegisterVM.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T01:53:36.986Z"
+              "WhenOpened": "2026-01-23T01:53:36.986Z",
+              "EditorCaption": ""
             }
           ]
         }

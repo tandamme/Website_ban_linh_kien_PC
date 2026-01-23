@@ -1,0 +1,52 @@
+﻿@model Do_an_lap_trinh_c_.Data.Billuser
+@using System.Globalization
+
+<h2>Chi tiết đơn hàng #@Model.SoHoaDon</h2>
+
+<p>
+    Ngày đặt:
+    @(Model.NgayHd.HasValue
+        ? Model.NgayHd.Value.ToString("dd/MM/yyyy")
+        : "—")
+    <br />
+
+    Tổng tiền:
+    @(Model.TriGia.HasValue
+        ? Model.TriGia.Value.ToString("N0", new CultureInfo("vi-VN")) + " ₫"
+        : "0 ₫")
+</p>
+
+<table class="table table-bordered">
+    <thead class="table-light">
+        <tr>
+            <th>Sản phẩm</th>
+            <th class="text-end">Đơn giá</th>
+            <th class="text-center">Số lượng</th>
+            <th class="text-end">Thành tiền</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Infobillusers)
+        {
+            <tr>
+                <td>@item.MaSanPhamNavigation.TenSanPham</td>
+
+                <td class="text-end">
+                    @item.DonGia.ToString("N0", new CultureInfo("vi-VN")) ₫
+                </td>
+
+                <td class="text-center">
+                    @item.SoLuong
+                </td>
+
+               <td class="text-end">
+                     @((item.SoLuong * item.DonGia).ToString("N0", new CultureInfo("vi-VN"))) ₫
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="MyOrders" class="btn btn-secondary">
+    ← Quay lại đơn hàng của tôi
+</a>
