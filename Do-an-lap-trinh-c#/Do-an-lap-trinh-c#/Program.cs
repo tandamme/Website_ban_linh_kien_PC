@@ -25,11 +25,6 @@ namespace Do_an_lap_trinh_c_
                 options.Cookie.IsEssential = true;
             });
 
-<<<<<<< HEAD
-       
-=======
-      
->>>>>>> main
 
             // ACTIVATE SESSION
             builder.Services.AddSession(options =>

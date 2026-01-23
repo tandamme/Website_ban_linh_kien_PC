@@ -667,3 +667,7 @@ D:\HocTap\2025 - Lap Trinh .NET\Linh Kien PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-
 D:\HocTap\2025 - Lap Trinh .NET\Linh Kien PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net10.0\Do-an-la.BCDA209D.Up2Date
 D:\HocTap\2025 - Lap Trinh .NET\Linh Kien PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net10.0\Do-an-lap-trinh-c#.genruntimeconfig.cache
 D:\HocTap\2025 - Lap Trinh .NET\Linh Kien PC\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net10.0\ref\Do-an-lap-trinh-c#.dll
+D:\HocTap\LinhKienPc\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net10.0\Do-an-lap-trinh-c#.csproj.AssemblyReference.cache
+D:\HocTap\LinhKienPc\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net10.0\Do-an-lap-trinh-c#.dll
+D:\HocTap\LinhKienPc\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net10.0\refint\Do-an-lap-trinh-c#.dll
+D:\HocTap\LinhKienPc\Do-an-lap-trinh-c#\Do-an-lap-trinh-c#\obj\Debug\net10.0\Do-an-lap-trinh-c#.pdb
