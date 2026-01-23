@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\linh kien pc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\do-an-lap-trinh-c#.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\linh kien pc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\linh kien pc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\linh kien pc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\viewmodels\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\viewmodels\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|d:\\hoctap\\2025 - lap trinh .net\\linh kien pc\\do-an-lap-trinh-c#\\do-an-lap-trinh-c#\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5EBDB62D-9C1A-4808-85C6-9F21BF1BF7B2}|Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj|solutionrelative:do-an-lap-trinh-c#\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +30,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Program.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Program.cs",
+              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Program.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Program.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:55:30.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginVM.cs",
+              "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\ViewModels\\LoginVM.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\ViewModels\\LoginVM.cs",
+              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\ViewModels\\LoginVM.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\ViewModels\\LoginVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:53:43.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterVM.cs",
+              "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\ViewModels\\RegisterVM.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\ViewModels\\RegisterVM.cs",
+              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\ViewModels\\RegisterVM.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\ViewModels\\RegisterVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:53:36.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Do-an-lap-trinh-c#",
+              "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
+              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-23T01:53:21.146Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -18,6 +91,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Do-an-lap-trinh-c#\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Do-an-lap-trinh-c#\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T01:52:30.617Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
