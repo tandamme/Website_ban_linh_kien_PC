@@ -1,0 +1,229 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/style1.css" />
+}
+     @* Home *@
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <!-- Slide 1-->
+            <div class="swiper-slide home-container">
+                <div class="home-text">
+                    <span>Cửa hàng linh kiện</span>
+                    <h1>Chọn linh kiện thích hợp của bạn!<br> chất lượng <br> giá cả hợp lý </h1>
+                     <a href="@Url.Action("Product", "Home")" class="btn">Shop now!<i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <div class="slide-bg" style="background-image:url('@Url.Content("~/img/home1.jpg")')"></div>
+            </div>
+
+
+             <!-- Slide 2-->
+            <div class="swiper-slide home-container">
+                <div class="home-text">
+                    <span>Liên tục cập nhập</span>
+                    <h1>Đảm bảo chất lượng sản phẩm <br> hiện đại <br> công suất mạnh mẽ </h1>
+                    <a href="@Url.Action("Product", "Home")" class="btn">Shop now!<i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <div class="slide-bg" style="background-image:url('@Url.Content("~/img/home2.jpg")')"></div>
+            </div>
+
+             <!-- Slide 3-->
+            <div class="swiper-slide home-container">
+                <div class="home-text">
+                    <span>Hàng chính hãng</span>
+                    <h1>Được kiểm duyệt bởi các chuyên gia<br> thương hiệu tốt nhất <br> khuyên dủng </h1>
+                    <a href="@Url.Action("Product", "Home")" class="btn">Shop now!<i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                <div class="slide-bg" style="background-image:url('@Url.Content("~/img/home3.webp")')"></div>
+            </div>
+        </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+      </section>
+
+    <!-- Categories-->
+    <section class="categories" id="categories">
+        <div class="heading">
+            <h1>Browse Out Hottest <br> <span>Accesories</span></h1>
+                <a href="@Url.Action("Product", "Home")" class="btn">See All<i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+        <!-- Container Content-->
+        <div class="categories-container">
+            <!-- Box 1 -->
+            <a href="/Home/Product?category=combo-pc" class="box box1">
+                <img src="~/img/combo-pc/cao-cap.jpg">
+                <h2>Combo PC</h2>
+                <span>23 sản phẩm</span>
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+             <!-- Box 2 -->
+            <a href="/Home/Product?category=linh-kien-roi" class="box box2">
+                <img src="~/img/linh-kien-roi/amd2.jpg">
+                <h2>Linh kiện rời</h2>
+                <span>56 sản phẩm</span>
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+             <!-- Box 3 -->
+            <a href="/Home/Product?category=phu-kien-pc" class="box box3">
+                <img src="~/img/phu-kien-pc/fan1.jpg">
+                <h2>Phụ kiện PC</h2>
+                <span>13 sản phẩm</span>
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+             <!-- Box 4 -->
+            <a href="/Home/Product?category=thiet-bi-mang" class="box box4">
+                <img src="~/img/thiet-bi-mang/card1.jpg">
+                <h2>Thiết bị mạng</h2>
+                <span>73 sản phẩm</span>
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+             <!-- Box 5 -->
+            <a href="/Home/Product?category=thiet-bi-ngoai-vi" class="box box5">
+                <img src="~/img/thiet-bi-ngoai-vi/headphone2.jpg">
+                <h2>Thiết bị ngoại vi</h2>
+                <span>68 sản phẩm</span>
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="prodcuts" id="products">
+        <div class="heading">
+            <h1>Our Popular <br> <span>Products</span></h1>
+                <a href="@Url.Action("Product", "Home")" class="btn">See All<i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+
+        <div class="products-container">
+@if (Model != null && Model.Count > 0)
+            {
+                // render top products (controller already limited to top 8)
+                foreach (var item in Model)
+                {
+                    var imgUrl = string.IsNullOrEmpty(item.Hinh) 
+                        ? Url.Content("~/img/no-image.png") 
+                        : (item.Hinh.StartsWith("~") ? Url.Content(item.Hinh) : Url.Content($"~/images/san_pham/{item.Hinh}"));
+
+                    var categoryName = item.MaLoaiNavigation?.TenLoai ?? "Khác";
+                    <div class="box">
+                        <a href="@Url.Action("ProductDetail", "Home", new { id = item.MaSanPham })">
+                            <img src="@imgUrl" alt="@item.TenSanPham" />
+                            <span>@categoryName</span>
+                            <h2>@item.TenSanPham</h2>
+                            <h3 class="price">@item.DonGia.ToString("N0") <span>VNĐ</span></h3>
+                           
+                            <i class='bx bx-heart'></i>
+                        </a>
+                         <button  onclick="addToCart(@item.MaSanPham)">
+                             <i class='bx bx-cart-alt'></i>
+                        </button>
+                    </div>
+                }
+            }
+            else
+            {
+                <h2 style="padding: 20px; text-align:center;">Không có sản phẩm để hiển thị!</h2>
+            }
+        </div>
+    </section>
+
+     <!-- About -->
+     <section class="about" id="about">
+         <img src="~/img/about.jpg" alt="">
+         <div class="about-text">
+             <span>About Us</span>
+             <h1>Your Trusted PC Accessories Store</h1>
+             <p>Chúng tôi là cửa hàng chuyên cung cấp linh kiện PC, phụ kiện máy tính và các giải pháp lắp ráp máy theo nhu cầu. 
+                 Với mục tiêu mang đến cho khách hàng những sản phẩm chính hãng, đa dạng, giá tốt và phù hợp với từng mục đích sử dụng, 
+                 chúng tôi luôn cập nhật các thế hệ linh kiện mới nhất trên thị trường.</p>
+         </div>
+             <a href="@Url.Action("AboutUs", "Home")" class="btn">Learn More<i class='bx bx-right-arrow-alt'></i></a>
+     </section>
+
+     <!-- Customers -->
+     <section class="customers" id="customers">
+         <h2>Sự tin tưởng từ khách hàng</h2>
+         <!-- Customer Content -->
+         <div class="customers-container">
+             <!-- Box 1 -->
+             <div class="box">
+                 <i class='bx bxs-quote-alt-left'></i>
+                 <div class="stars">
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star-half'></i>
+                 </div>
+                 <p>Dịch vụ tuyệt vời và sản phẩm chất lượng cao. Tôi rất hài lòng với trải nghiệm mua sắm tại đây!</p>
+                 <div class="review-profile">
+                     <img src="~/img/user1.jpg" alt="">
+                     <h3>Nguyễn Văn A</h3>
+                 </div>
+             </div>
+              <!-- Box 2 -->
+             <div class="box">
+                 <i class='bx bxs-quote-alt-left'></i>
+                 <div class="stars">
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                 </div>
+                 <p>Sản phẩm cực kì chất lượng, ưu đãi rất tuyệt vời. Tôi chắc chắn sẽ ghé thăm lại lần nữa</p>
+                 <div class="review-profile">
+                     <img src="~/img/user1.jpg" alt="">
+                     <h3>Trần Thị B</h3>
+                 </div>
+             </div>
+              <!-- Box 3 -->
+             <div class="box">
+                 <i class='bx bxs-quote-alt-left'></i>
+                 <div class="stars">
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star'></i>
+                     <i class='bx bxs-star-half'></i>
+                 </div>
+                 <p>Giao hàng nhanh chóng và đóng gói cẩn thận. Tôi nghĩ tôi còn sẽ gắn bó với cửa hàng lâu dài</p>
+                 <div class="review-profile">
+                     <img src="~/img/user3.jpg" alt="">
+                     <h3>Lưu Văn C</h3>
+                 </div>
+             </div>
+         </div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="~/js/site.js"></script>
+<script>
+function addToCart(id){
+    fetch('/cart/add',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+            productId:id,
+            quantity:1
+        })
+    })
+    .then(r=>r.json())
+    .then(res=>{
+        if(res.ok){
+            alert("Đã thêm!");
+        }
+    });
+}
+</script>
+
+
+
