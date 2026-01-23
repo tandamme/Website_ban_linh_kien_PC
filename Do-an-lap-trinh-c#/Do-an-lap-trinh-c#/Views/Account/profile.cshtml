@@ -1,0 +1,81 @@
+﻿@model Do_an_lap_trinh_c_.Data.User
+
+@{
+    ViewData["Title"] = "Thông tin người dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container profile-wrapper">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">👤 Thông tin người dùng</h4>
+        </div>
+
+        <div class="card-body" >
+            <div class="row mb-3">
+                <div class="col-md-4 fw-bold">Họ tên:</div>
+                <div class="col-md-8">@Model.HoTen</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-bold">Tên đăng nhập:</div>
+                <div class="col-md-8">@Model.TenDangNhap</div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-bold">Email:</div>
+                <div class="col-md-8">
+                    @(Model.Email ?? "Chưa cập nhật")
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-bold">Địa chỉ:</div>
+                <div class="col-md-8">
+                    @(Model.DiaChi ?? "Chưa cập nhật")
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-bold">Ngày đăng ký:</div>
+                <div class="col-md-8">
+                    @(Model.NgayDangKy?.ToString("dd/MM/yyyy") ?? "—")
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-bold">Đăng nhập lần cuối:</div>
+                <div class="col-md-8">
+                    @(Model.NgayDangNhapCuoi?.ToString("dd/MM/yyyy") ?? "—")
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-4 fw-bold">Trạng thái:</div>
+                <div class="col-md-8">
+                    @if (Model.Active == 1)
+                    {
+                        <span class="badge bg-success">Hoạt động</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Bị khóa</span>
+                    }
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card-footer text-end">
+            <a asp-action="Logout" class="btn btn-danger">
+                🚪 Đăng xuất
+            </a>
+        </div>
+    </div>
+</div>
+
+                    <style>
+                       .profile-wrapper {
+                             margin-top: 150px; 
+                            }
+                    </style>

@@ -116,6 +116,10 @@ public class AccountController : Controller
         HttpContext.Session.SetString("FullName", user.HoTen);
         HttpContext.Session.SetInt32("Role", user.MaLoaiNguoiDung);
 
+        // cập nhật ngày đăng nhập cuối
+        user.NgayDangNhapCuoi = DateOnly.FromDateTime(DateTime.Now);
+        _context.SaveChanges();
+
         if (!string.IsNullOrEmpty(ReturnUrl))
             return Redirect(ReturnUrl);
 
@@ -173,4 +177,32 @@ public class AccountController : Controller
         return Content("OK");
     }
 
+    public IActionResult Profile()
+    {
+        // 🔐 Lấy UserId từ Session
+        int? userId = HttpContext.Session.GetInt32("UserId");
+
+        if (userId == null)
+        {
+            // chưa login → đá về login
+            return RedirectToAction("Login");
+        }
+
+        // 🔎 Lấy user từ DB
+        var user = _context.Users
+            .FirstOrDefault(u => u.MaNguoiDung == userId);
+
+        if (user == null)
+        {
+            return RedirectToAction("Login");
+        }
+
+        return View(user);
+    }
+
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Home", "Home");
+    }
 }

@@ -144,28 +144,34 @@
 
         <!-- Profile -->
         @{
-    var username = Context.Session.GetString("USERNAME");
+    var userId = Context.Session.GetInt32("UserId");
+    var fullName = Context.Session.GetString("FullName");
 }
 
-@if (string.IsNullOrEmpty(username))
+@if (userId == null)
 {
-    <!-- CHƯA LOGIN -->
+    <!-- CHƯA ĐĂNG NHẬP -->
     <a asp-controller="Account" asp-action="Login" class="btn-login">
         <i class='bx bx-user'></i> Đăng nhập
     </a>
 }
 else
 {
-    <!-- ĐÃ LOGIN -->
+    <!-- ĐÃ ĐĂNG NHẬP -->
     <div class="profile" id="profileMenu">
         <img src="~/img/pfp.webp" alt="" />
-        <span>@username</span>
+        <span>Chào, @fullName</span>
         <i class='bx bx-caret-down'></i>
 
-        <ul class="profile-dropdown" id="profileDropdown">
-            <li><a asp-controller="Home" asp-action="ProductManagement">Admin</a></li>
+        <ul class="profile-dropdown" id="profileDropdown" style="width: 200px;">
             <li>
-                <a asp-controller="Home" asp-action="Logout">
+                <a asp-controller="Account" asp-action="Profile">
+                    Thông tin cá nhân
+                </a>
+            </li>
+
+            <li>
+                <a asp-controller="Account" asp-action="Logout">
                     Đăng xuất
                 </a>
             </li>
