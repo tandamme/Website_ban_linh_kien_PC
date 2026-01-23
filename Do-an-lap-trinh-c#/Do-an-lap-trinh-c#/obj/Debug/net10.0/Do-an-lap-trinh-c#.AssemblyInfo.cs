@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Do-an-lap-trinh-c#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4cf3afd0ae333563db2d5ad03f38f977b1ba4efd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd617c9345b01bf23702b2014d6a325b0220c4b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Do-an-lap-trinh-c#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Do-an-lap-trinh-c#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
