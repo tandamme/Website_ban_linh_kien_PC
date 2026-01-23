@@ -74,8 +74,18 @@ public class OrderController : Controller
 
     public IActionResult CheckSuccess(int id)
     {
-        ViewBag.BillId = id;
-        return View();
+        var userId = HttpContext.Session.GetInt32("UserId");
+        if (userId == null)
+            return RedirectToAction("Login", "Account");
+
+        var bill = _context.Billusers
+            .Include(b => b.MaUserNavigation)
+            .FirstOrDefault(b => b.SoHoaDon == id && b.MaUser == userId);
+
+        if (bill == null)
+            return NotFound();
+
+        return View(bill);
     }
 
     // ================= MAIL =================
@@ -120,4 +130,39 @@ public class OrderController : Controller
         smtp.Send(mail);
     }
 
+
+
+    public IActionResult MyOrders()
+    {
+        var userId = HttpContext.Session.GetInt32("UserId");
+        if (userId == null)
+            return RedirectToAction("Login", "Account");
+
+        var orders = _context.Billusers
+            .Where(x => x.MaUser == userId)
+            .OrderByDescending(x => x.NgayHd)
+            .ToList();
+
+        return View(orders);
+    }
+
+    // GET: /Order/Details/5
+
+    [Route("Order/OrderDetail/{id}")]
+    public IActionResult Details(int id)
+    {
+        var userId = HttpContext.Session.GetInt32("UserId");
+        if (userId == null)
+            return RedirectToAction("Login", "Account");
+
+        var billUser = _context.Billusers
+            .Include(b => b.Infobillusers)
+                .ThenInclude(i => i.MaSanPhamNavigation)
+            .FirstOrDefault(b => b.SoHoaDon == id && b.MaUser == userId.Value);
+
+        if (billUser == null)
+            return NotFound();
+
+        return View(billUser);
+    }
 }
