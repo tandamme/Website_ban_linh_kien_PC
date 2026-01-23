@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\Website bán linh kiện PC (1)\\Website bán linh kiện PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj": {}
+    "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj": {}
   },
   "projects": {
-    "D:\\C#\\Website bán linh kiện PC (1)\\Website bán linh kiện PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj": {
+    "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\Website bán linh kiện PC (1)\\Website bán linh kiện PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
+        "projectUniqueName": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
         "projectName": "Do-an-lap-trinh-c#",
-        "projectPath": "D:\\C#\\Website bán linh kiện PC (1)\\Website bán linh kiện PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
-        "packagesPath": "C:\\Users\\thutr\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\Website bán linh kiện PC (1)\\Website bán linh kiện PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\obj\\",
+        "projectPath": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
+        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
+        "outputPath": "D:\\HocTap\\2025 - Lap Trinh .NET\\Linh Kien PC\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\thutr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
