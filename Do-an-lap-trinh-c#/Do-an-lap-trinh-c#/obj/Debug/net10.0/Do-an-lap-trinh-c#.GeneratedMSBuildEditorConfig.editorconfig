@@ -30,6 +30,21 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
+<<<<<<< HEAD
+[D:/HocTap/2025 - Lap Trinh .NET/Linh Kien PC/Do-an-lap-trinh-c\#/Do-an-lap-trinh-c\#/Views/Account/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxsb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HocTap/2025 - Lap Trinh .NET/Linh Kien PC/Do-an-lap-trinh-c\#/Do-an-lap-trinh-c\#/Views/Account/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxwcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/HocTap/2025 - Lap Trinh .NET/Linh Kien PC/Do-an-lap-trinh-c\#/Do-an-lap-trinh-c\#/Views/Account/signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxzaWdudXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+=======
+>>>>>>> main
 [D:/HocTap/2025 - Lap Trinh .NET/Linh Kien PC/Do-an-lap-trinh-c\#/Do-an-lap-trinh-c\#/Views/Admin/addProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYWRkUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,18 +57,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cZWRpdFByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
+=======
 [D:/HocTap/2025 - Lap Trinh .NET/Linh Kien PC/Do-an-lap-trinh-c\#/Do-an-lap-trinh-c\#/Views/Admin/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cbG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+>>>>>>> main
 [D:/HocTap/2025 - Lap Trinh .NET/Linh Kien PC/Do-an-lap-trinh-c\#/Do-an-lap-trinh-c\#/Views/Admin/productManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccHJvZHVjdE1hbmFnZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
+=======
 [D:/HocTap/2025 - Lap Trinh .NET/Linh Kien PC/Do-an-lap-trinh-c\#/Do-an-lap-trinh-c\#/Views/Admin/signup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cc2lnbnVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+>>>>>>> main
 [D:/HocTap/2025 - Lap Trinh .NET/Linh Kien PC/Do-an-lap-trinh-c\#/Do-an-lap-trinh-c\#/Views/Admin/userManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdXNlck1hbmFnZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
