@@ -1,0 +1,257 @@
+﻿@model IEnumerable<Do_an_lap_trinh_c_.Data.Product>
+
+@{
+    ViewData["Title"] = "Product Management";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="pm-container">
+
+    <!-- HEADER -->
+    <div class="pm-header">
+        <h2>Quản lý sản phẩm</h2>
+    </div>
+
+    <!-- TOOLBAR: SEARCH + FILTER + ADD -->
+    <div>
+        <div class="pm-toolbar">
+
+            <!-- LEFT: FILTER -->
+            <form method="get" class="filter-form">
+
+                <input type="text" name="search" class="filter-input" placeholder="Tìm kiếm sản phẩm..." />
+
+                <select name="loai" class="filter-select">
+                    <option value="">Tất cả danh mục</option>
+                    @if (ViewBag.Loai != null)
+                    {
+                        foreach (var l in (SelectList)ViewBag.Loai)
+                        {
+                            <option value="@l.Value">@l.Text</option>
+                        }
+                    }
+                </select>
+
+                <button type="submit" class="btn-filter">Lọc</button>
+            </form>
+
+            <!-- RIGHT: ADD PRODUCT -->
+            <a asp-controller="Products" asp-action="AddProduct" class="btn-add">
+                ➕ Thêm sản phẩm
+            </a>
+
+
+        </div>
+    </div>
+    <!-- TABLE -->
+    <div class="pm-table-container">
+        <table class="pm-table">
+            <thead>
+                <tr>
+                    <th>Ảnh</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Danh mục</th>
+                    <th>Giá</th>
+                    <th>Mới</th>
+                    <th>Lượt xem</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <img src="~/images/products/@item.Hinh" class="pm-img"
+                                    onerror="this.src='/images/no-image.png'" />
+                            </td>
+
+                            <td>@item.TenSanPham</td>
+
+                            <td>@item.MaLoaiNavigation?.TenLoai</td>
+
+                            <td>@item.DonGia.ToString("N0") ₫</td>
+
+                            <td>
+                                @if (item.SanPhamMoi == 1)
+                                {
+                                    <span class="status active">Mới</span>
+                                }
+                                else
+                                {
+                                    <span class="status inactive">Cũ</span>
+                                }
+                            </td>
+
+                            <td>@item.SoLanXem</td>
+
+                            <td class="action-cell">
+                                <a asp-controller="Products" asp-action="Edit" asp-route-id="@item.MaSanPham" class="btn-edit">
+                                    Edit
+                                </a>
+
+                                <form asp-controller="Products" asp-action="Delete" asp-route-id="@item.MaSanPham" method="post"
+                                    onsubmit="return confirm('Bạn chắc chắn muốn xóa?');" style="display:inline-block">
+                                    <button type="submit" class="btn-delete">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="7" style="text-align:center; padding:20px;">
+                            ❌ Không có sản phẩm
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<style>
+    .pm-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .pm-header h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    /* TOOLBAR */
+    .pm-toolbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .filter-form {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+    }
+
+    .toolbar-right {
+        flex-shrink: 0;
+        /* ✅ KHÔNG BỊ ĐẨY RA NGOÀI */
+    }
+
+    .filter-input,
+    .filter-select {
+        padding: 8px 10px;
+        border: 1px solid #dadada;
+        border-radius: 6px;
+        min-width: 180px;
+    }
+
+    .btn-filter {
+        padding: 8px 16px;
+        background: #007bff;
+        color: #fff;
+        border-radius: 6px;
+        border: none;
+    }
+
+    /* ADD BUTTON */
+    .btn-add {
+        padding: 10px 16px;
+        background: #074aa3;
+        color: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .btn-add:hover {
+        background: #0f8080;
+    }
+
+    /* TABLE */
+    .pm-table-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .pm-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .pm-table th {
+        background: #f7f7f7;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .pm-table td {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+    }
+
+    .pm-img {
+        width: 55px;
+        height: 55px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .status {
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 5px;
+        color: #fff;
+    }
+
+    .status.active {
+        background: #28a745;
+    }
+
+    .status.inactive {
+        background: #6c757d;
+    }
+
+    .action-cell {
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn-edit {
+        background: #007bff;
+        color: #fff;
+        padding: 6px 10px;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+    .btn-delete {
+        background: #dc3545;
+        color: #fff;
+        padding: 6px 10px;
+        border-radius: 4px;
+        border: none;
+    }
+</style>
