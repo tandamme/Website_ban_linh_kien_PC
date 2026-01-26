@@ -9,9 +9,7 @@ public partial class Customer
 
     public string TenKhachHang { get; set; } = null!;
 
-    public byte Phai { get; set; }
 
-    public DateOnly? NgaySinh { get; set; }
 
     public string? DiaChi { get; set; }
 

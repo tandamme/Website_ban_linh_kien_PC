@@ -97,8 +97,7 @@ public partial class LinhkienpcContext : DbContext
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
                 .HasColumnName("email");
-            entity.Property(e => e.NgaySinh).HasColumnName("ngay_sinh");
-            entity.Property(e => e.Phai).HasColumnName("phai");
+       
             entity.Property(e => e.TenKhachHang)
                 .HasMaxLength(100)
                 .HasColumnName("ten_khach_hang");

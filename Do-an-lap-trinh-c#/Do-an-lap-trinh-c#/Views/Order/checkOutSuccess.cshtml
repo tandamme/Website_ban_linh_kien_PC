@@ -1,7 +1,7 @@
-﻿@{
+﻿﻿@{
     ViewData["Title"] = "Order Success";
 }
-@model Do_an_lap_trinh_c_.Data.Billuser
+@model Do_an_lap_trinh_c_.Data.Bill
 <style>
     .success-container {
         max-width: 700px;
@@ -70,17 +70,15 @@
         Chúng tôi đã nhận được đơn của bạn.
     </div>
 
-<div class="success-info">
+    <div class="success-info">
         <p><strong>Khách hàng:</strong> @TempData["FullName"]</p>
         <p><strong>Email:</strong> @TempData["Email"]</p>
         <p><strong>Phương thức thanh toán:</strong> @TempData["PaymentMethod"]</p>
-    <p><strong>Ngày đặt:</strong> @Model.NgayHd?.ToString("dd/MM/yyyy")</p>
+  <p><strong>Ngày đặt:</strong> @Model.NgayHd?.ToString("dd/MM/yyyy")</p>
     <p>
         <strong>Tổng tiền:</strong>
         @Model.TriGia?.ToString("N0") ₫
-    </p>
-</div>
+    </div>
 
     <a href="/Home/Home" class="success-btn">Tiếp tục mua sắm</a>
 </div>
-
