@@ -71,8 +71,9 @@
     </div>
 
 <div class="success-info">
-    <p><strong>Khách hàng:</strong> @Model.MaUserNavigation?.HoTen</p>
-    <p><strong>Email:</strong> @Model.MaUserNavigation?.Email</p>
+        <p><strong>Khách hàng:</strong> @TempData["FullName"]</p>
+        <p><strong>Email:</strong> @TempData["Email"]</p>
+        <p><strong>Phương thức thanh toán:</strong> @TempData["PaymentMethod"]</p>
     <p><strong>Ngày đặt:</strong> @Model.NgayHd?.ToString("dd/MM/yyyy")</p>
     <p>
         <strong>Tổng tiền:</strong>

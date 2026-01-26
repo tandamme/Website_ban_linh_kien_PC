@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj": {}
+    "C:\\Users\\thutr\\source\\repos\\Website_ban_linh_kien_PC4\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj": {}
   },
   "projects": {
-    "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj": {
+    "C:\\Users\\thutr\\source\\repos\\Website_ban_linh_kien_PC4\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
+        "projectUniqueName": "C:\\Users\\thutr\\source\\repos\\Website_ban_linh_kien_PC4\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
         "projectName": "Do-an-lap-trinh-c#",
-        "projectPath": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "D:\\HocTap\\LinhKienPc\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\obj\\",
+        "projectPath": "C:\\Users\\thutr\\source\\repos\\Website_ban_linh_kien_PC4\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#.csproj",
+        "packagesPath": "C:\\Users\\thutr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\thutr\\source\\repos\\Website_ban_linh_kien_PC4\\Do-an-lap-trinh-c#\\Do-an-lap-trinh-c#\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thutr\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
