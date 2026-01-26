@@ -65,57 +65,65 @@ namespace Do_an_lap_trinh_c_.Controllers
             return View("~/Views/Products/addProduct.cshtml");
         }
 
+        // Tìm đến đoạn [HttpPost] AddProduct cũ và thay thế bằng đoạn này:
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddProduct(Product product, IFormFile? ImageFile)
         {
+            // 1. Bỏ qua validation cho các trường không nhập từ form
+            ModelState.Remove(nameof(Product.SoLanXem));
+            ModelState.Remove(nameof(Product.NgayTao));
+            ModelState.Remove(nameof(Product.Hinh));
+
+            // QUAN TRỌNG: Bỏ qua MaLoaiNavigation vì khi submit form nó là null, gây lỗi isValid = false
+            ModelState.Remove("MaLoaiNavigation");
+
+            // 2. Gán giá trị mặc định
             product.SoLanXem = 0;
             product.NgayTao = DateOnly.FromDateTime(DateTime.Now);
 
+            // 3. Xử lý upload ảnh
             if (ImageFile != null && ImageFile.Length > 0)
             {
-                string folder = Path.Combine(_env.WebRootPath, "images/products");
-                Directory.CreateDirectory(folder);
+                string folderPath = Path.Combine(_env.WebRootPath, "images/products");
+                if (!Directory.Exists(folderPath))
+                    Directory.CreateDirectory(folderPath);
 
-                string fileName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
-                string filePath = Path.Combine(folder, fileName);
+                // Tạo tên file ngẫu nhiên để tránh trùng
+                string fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                string filePath = Path.Combine(folderPath, fileName);
 
-                using var stream = new FileStream(filePath, FileMode.Create);
-                await ImageFile.CopyToAsync(stream);
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await ImageFile.CopyToAsync(stream);
+                }
 
                 product.Hinh = fileName;
             }
             else
             {
-                product.Hinh = "no-image.png";
+                product.Hinh = "no-image.png"; // Ảnh mặc định nếu không upload
             }
 
-            if (!ModelState.IsValid)
+            // 4. Kiểm tra Validation
+            if (ModelState.IsValid)
             {
-                ViewBag.MaLoai = new SelectList(
-                    _context.Typeproducts,
-                    "MaLoai",
-                    "TenLoai",
-                    product.MaLoai
-                );
-                return View("~/Views/Products/addProduct.cshtml", product);
+                try
+                {
+                    _context.Products.Add(product);
+                    await _context.SaveChangesAsync();
+                    // Lưu thành công thì quay về trang quản lý
+                    return RedirectToAction("ProductManagement", "Home");
+                }
+                catch (Exception ex)
+                {
+                    // Nếu có lỗi SQL hoặc hệ thống, báo lỗi ra view
+                    ModelState.AddModelError("", "Lỗi khi lưu dữ liệu: " + ex.Message);
+                }
             }
 
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("ProductManagement", "Home");
-        }
-
-        // ================== EDIT ==================
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null) return NotFound();
-
-            var product = await _context.Products.FindAsync(id);
-            if (product == null) return NotFound();
-
+            // 5. Nếu thất bại (Validation sai hoặc Lỗi try-catch), load lại View và Dropdown
             ViewBag.MaLoai = new SelectList(
                 _context.Typeproducts,
                 "MaLoai",
@@ -123,66 +131,111 @@ namespace Do_an_lap_trinh_c_.Controllers
                 product.MaLoai
             );
 
+            return View("~/Views/Products/addProduct.cshtml", product);
+
+        }
+
+        // ================== EDIT ==================
+        // ==========================================
+        // 1. HÀM GET: Dùng để hiển thị form sửa (Chạy khi bấm nút Edit)
+        // ==========================================
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null) return NotFound();
+
+            var product = await _context.Products.FindAsync(id);
+            if (product == null) return NotFound();
+
+            // Tạo dropdown danh mục
+            ViewBag.MaLoai = new SelectList(
+                _context.Typeproducts,
+                "MaLoai",
+                "TenLoai",
+                product.MaLoai
+            );
+
+            // Trả về View Edit.cshtml để người dùng nhập liệu
             return View(product);
         }
 
+        // ==========================================
+        // 2. HÀM POST: Dùng để lưu dữ liệu (Chạy khi bấm nút Lưu)
+        // ==========================================
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Product product, IFormFile? ImageFile)
         {
             if (id != product.MaSanPham) return NotFound();
 
-            if (!ModelState.IsValid)
+            // Bỏ qua validation các trường không nhập từ form
+            ModelState.Remove("MaLoaiNavigation");
+            ModelState.Remove("Hinh");
+            ModelState.Remove("NgayTao");
+            ModelState.Remove("SoLanXem");
+
+            if (ModelState.IsValid)
             {
-                ViewBag.MaLoai = new SelectList(
-                    _context.Typeproducts,
-                    "MaLoai",
-                    "TenLoai",
-                    product.MaLoai
-                );
-                return View(product);
-            }
-
-            var oldProduct = await _context.Products
-                .AsNoTracking()
-                .FirstOrDefaultAsync(p => p.MaSanPham == id);
-
-            if (oldProduct == null) return NotFound();
-
-            // ===== Image update =====
-            if (ImageFile != null && ImageFile.Length > 0)
-            {
-                string folder = Path.Combine(_env.WebRootPath, "images/products");
-
-                if (!string.IsNullOrEmpty(oldProduct.Hinh))
+                try
                 {
-                    string oldPath = Path.Combine(folder, oldProduct.Hinh);
-                    if (System.IO.File.Exists(oldPath))
-                        System.IO.File.Delete(oldPath);
+                    var oldProduct = await _context.Products
+                        .AsNoTracking()
+                        .FirstOrDefaultAsync(p => p.MaSanPham == id);
+
+                    if (oldProduct == null) return NotFound();
+
+                    // --- XỬ LÝ ẢNH ---
+                    if (ImageFile != null && ImageFile.Length > 0)
+                    {
+                        string folder = Path.Combine(_env.WebRootPath, "images/products");
+
+                        // Xóa ảnh cũ
+                        if (!string.IsNullOrEmpty(oldProduct.Hinh))
+                        {
+                            string oldPath = Path.Combine(folder, oldProduct.Hinh);
+                            if (System.IO.File.Exists(oldPath)) System.IO.File.Delete(oldPath);
+                        }
+
+                        // Lưu ảnh mới
+                        string fileName = Guid.NewGuid().ToString() + Path.GetExtension(ImageFile.FileName);
+                        string newPath = Path.Combine(folder, fileName);
+                        using (var stream = new FileStream(newPath, FileMode.Create))
+                        {
+                            await ImageFile.CopyToAsync(stream);
+                        }
+                        product.Hinh = fileName;
+                    }
+                    else
+                    {
+                        product.Hinh = oldProduct.Hinh; // Giữ ảnh cũ
+                    }
+
+                    // --- GIỮ DATA CŨ ---
+                    product.SoLanXem = oldProduct.SoLanXem;
+                    product.NgayTao = oldProduct.NgayTao;
+
+                    // --- LƯU DATABASE ---
+                    _context.Products.Update(product);
+                    await _context.SaveChangesAsync();
+
+                    // Chuyển hướng về trang Quản lý
+                    return RedirectToAction("ProductManagement", "Home");
                 }
-
-                string fileName = Guid.NewGuid() + Path.GetExtension(ImageFile.FileName);
-                string newPath = Path.Combine(folder, fileName);
-
-                using var stream = new FileStream(newPath, FileMode.Create);
-                await ImageFile.CopyToAsync(stream);
-
-                product.Hinh = fileName;
-            }
-            else
-            {
-                product.Hinh = oldProduct.Hinh;
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Lỗi cập nhật: " + ex.Message);
+                }
             }
 
-            product.SoLanXem = oldProduct.SoLanXem;
-            product.NgayTao = oldProduct.NgayTao;
-
-            _context.Products.Update(product);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction(nameof(Index));
+            // Nếu lỗi thì load lại dropdown và hiển thị lại form
+            ViewBag.MaLoai = new SelectList(
+                _context.Typeproducts,
+                "MaLoai",
+                "TenLoai",
+                product.MaLoai
+            );
+            return View(product);
         }
-
         // ================== DELETE ==================
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -206,7 +259,7 @@ namespace Do_an_lap_trinh_c_.Controllers
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("ProductManagement", "Home");
         }
     }
 }

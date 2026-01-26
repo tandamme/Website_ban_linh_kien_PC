@@ -7,72 +7,68 @@
 <h2 class="page-title">➕ Thêm sản phẩm mới</h2>
 
 <div class="page-center">
-
     <form asp-controller="Products" asp-action="AddProduct" method="post" enctype="multipart/form-data"
         class="product-form">
-        @Html.AntiForgeryToken()
 
-        <!-- LEFT -->
+        @Html.AntiForgeryToken()
+        <div asp-validation-summary="ModelOnly" class="text-danger" style="width:100%; padding-bottom:15px;"></div>
+
         <div class="form-section">
             <h3>Thông tin sản phẩm</h3>
 
             <div class="form-group">
                 <label>Tên sản phẩm</label>
                 <input asp-for="TenSanPham" class="form-control" />
+                <span asp-validation-for="TenSanPham" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="MaLoai" class="control-label">Danh mục</label>
+                <label>Danh mục</label>
                 <select asp-for="MaLoai" class="form-control" asp-items="ViewBag.MaLoai">
-                    <option value="0">-- Chọn danh mục --</option>
+                    <option value="">-- Chọn danh mục --</option>
                 </select>
+                <span asp-validation-for="MaLoai" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label>Đơn giá (VNĐ)</label>
+                <label>Đơn giá</label>
                 <input asp-for="DonGia" type="number" class="form-control" />
+                <span asp-validation-for="DonGia" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label>Mô tả tóm tắt</label>
                 <textarea asp-for="MoTaTomTat" class="form-control"></textarea>
+                <span asp-validation-for="MoTaTomTat" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label>Mô tả chi tiết</label>
                 <textarea asp-for="MoTaChiTiet" class="form-control"></textarea>
+                <span asp-validation-for="MoTaChiTiet" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <label>Trạng thái</label>
                 <select asp-for="SanPhamMoi" class="form-control">
                     <option value="1">Sản phẩm mới</option>
-                    <option value="0">Sản phẩm thường</option>
+                    <option value="0">Sản phẩm cũ</option>
                 </select>
             </div>
-            <!-- RIGHT -->
-            <div class="image-section">
-                <h4>Ảnh sản phẩm</h4>
-
-                <label class="upload-box">
-                    Click để tải ảnh
-                    <input type="file" name="ImageFile" accept="image/*" hidden onchange="previewImage(event)" />
-                </label>
-
-                <img id="preview" />
-            </div>
-            <button type="submit" class="btn-submit">
-                ➕ Thêm sản phẩm
-            </button>
         </div>
 
-
-
+        <div class="image-section">
+            <h4>Ảnh sản phẩm</h4>
+            <label class="upload-box">
+                Chọn ảnh
+                <input type="file" name="ImageFile" accept="image/*" hidden onchange="previewImage(event)" />
+            </label>
+            <img id="preview" />
+            <button type="submit" class="btn-submit">Thêm sản phẩm</button>
+            <br />
+            <a asp-action="Index">Quay lại danh sách</a>
+        </div>
     </form>
 </div>
 
 @section Styles {
-    /* Căn giữa toàn bộ form */
     <style>
         .page-center {
             display: flex;
@@ -80,7 +76,6 @@
             padding: 40px 20px;
         }
 
-        /* Form layout trái - phải */
         .product-form {
             display: flex;
             gap: 30px;
@@ -92,18 +87,15 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        /* LEFT */
         .form-section {
             flex: 2;
         }
 
-        /* RIGHT */
         .image-section {
             flex: 1;
             text-align: center;
         }
 
-        /* Upload box */
         .upload-box {
             display: block;
             border: 2px dashed #ccc;
@@ -114,128 +106,51 @@
             margin-bottom: 15px;
         }
 
-        .upload-box:hover {
-            border-color: #007bff;
-            color: #007bff;
-        }
-
-        /* Preview image */
         #preview {
             max-width: 100%;
             height: auto;
             display: none;
-            border-radius: 8px;
+            margin-top: 10px;
         }
 
-        /* Button */
         .btn-submit {
-            margin-top: 15px;
             padding: 10px 20px;
             background: #ee4d2d;
             color: #fff;
             border: none;
             border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .btn-submit:hover {
-            background: #d84326;
-        }
-
-        body {
-            background: #f6f7fb;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .page-title {
-            font-size: 26px;
-            font-weight: 700;
-            margin: 30px 5%;
-        }
-
-        .product-wrapper {
-            width: 90%;
-            margin: auto;
-            display: flex;
-            gap: 25px;
-        }
-
-        .form-section,
-        .image-section {
-            background: #fff;
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
-        }
-
-        .form-section {
-            flex: 2;
-        }
-
-        .image-section {
-            flex: 1;
-            text-align: center;
-        }
-
-        label {
-            font-weight: 600;
-            margin-bottom: 6px;
-            display: block;
+            width: 100%;
+            margin-top: 10px;
         }
 
         .form-group {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
-        .form-control,
-        textarea,
-        select {
+        .form-control {
             width: 100%;
-            padding: 14px;
-            border-radius: 10px;
-            border: 1px solid #dcdfe6;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        textarea {
-            min-height: 120px;
-        }
-
-        button {
-            background: #ff5722;
-            color: white;
-            padding: 16px;
-            border-radius: 12px;
-            width: 250px;
-            border: none;
-            font-size: 17px;
-            font-weight: 700;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        #preview {
-            width: 100%;
-            max-width: 260px;
-            border-radius: 12px;
-            display: none;
-            margin-top: 15px;
-        }
-
-        .upload-box {
-            border: 2px dashed #c5c9d6;
-            padding: 20px;
-            border-radius: 15px;
-            cursor: pointer;
+        .text-danger {
+            font-size: 0.85rem;
         }
     </style>
 }
+
 @section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
     <script>
         function previewImage(event) {
             const img = document.getElementById("preview");
-            img.src = URL.createObjectURL(event.target.files[0]);
-            img.style.display = "block";
+            if (event.target.files && event.target.files[0]) {
+                img.src = URL.createObjectURL(event.target.files[0]);
+                img.style.display = "block";
+            }
         }
     </script>
 }

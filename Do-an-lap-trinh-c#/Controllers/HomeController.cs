@@ -24,7 +24,7 @@ namespace Do_an_lap_trinh_c_.Controllers
             var products = await _context.Products
                 .Include(p => p.MaLoaiNavigation)
                 .AsNoTracking()
-                .OrderByDescending(p => p.SanPhamMoi)
+                .OrderByDescending(p => p.SanPhamMoi) 
                 .ThenByDescending(p => p.SoLanXem)
                 .Take(8)
                 .ToListAsync();

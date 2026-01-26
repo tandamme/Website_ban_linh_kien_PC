@@ -1,74 +1,231 @@
 ﻿@model Do_an_lap_trinh_c_.Data.Product
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Sửa sản phẩm";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Edit</h1>
+<h2 class="page-title">✏️ Cập nhật sản phẩm</h2>
 
-<h4>Product</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="MaSanPham" />
+<div class="page-center">
+    <form asp-action="Edit" method="post" enctype="multipart/form-data" class="product-form">
+
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" asp-for="MaSanPham" />
+
+        <input type="hidden" asp-for="NgayTao" />
+        <input type="hidden" asp-for="SoLanXem" />
+        <input type="hidden" asp-for="Hinh" />
+        <div asp-validation-summary="ModelOnly" class="text-danger" style="width:100%; padding-bottom:15px;"></div>
+
+        <div class="form-section">
+            <h3>Thông tin sản phẩm</h3>
+
             <div class="form-group">
-                <label asp-for="TenSanPham" class="control-label"></label>
+                <label>Tên sản phẩm</label>
                 <input asp-for="TenSanPham" class="form-control" />
                 <span asp-validation-for="TenSanPham" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="MaLoai" class="control-label"></label>
-                <select asp-for="MaLoai" class="form-control" asp-items="ViewBag.MaLoai"></select>
+                <label>Danh mục</label>
+                <select asp-for="MaLoai" class="form-control" asp-items="ViewBag.MaLoai">
+                    <option value="">-- Chọn danh mục --</option>
+                </select>
                 <span asp-validation-for="MaLoai" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="MoTaTomTat" class="control-label"></label>
-                <input asp-for="MoTaTomTat" class="form-control" />
-                <span asp-validation-for="MoTaTomTat" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MoTaChiTiet" class="control-label"></label>
-                <input asp-for="MoTaChiTiet" class="form-control" />
-                <span asp-validation-for="MoTaChiTiet" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DonGia" class="control-label"></label>
-                <input asp-for="DonGia" class="form-control" />
+                <label>Đơn giá (VNĐ)</label>
+                <input asp-for="DonGia" type="number" class="form-control" />
                 <span asp-validation-for="DonGia" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Hinh" class="control-label"></label>
-                <input asp-for="Hinh" class="form-control" />
-                <span asp-validation-for="Hinh" class="text-danger"></span>
+                <label>Mô tả tóm tắt</label>
+                <textarea asp-for="MoTaTomTat" class="form-control"></textarea>
+                <span asp-validation-for="MoTaTomTat" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="SanPhamMoi" class="control-label"></label>
-                <input asp-for="SanPhamMoi" class="form-control" />
-                <span asp-validation-for="SanPhamMoi" class="text-danger"></span>
+                <label>Mô tả chi tiết</label>
+                <textarea asp-for="MoTaChiTiet" class="form-control"></textarea>
+                <span asp-validation-for="MoTaChiTiet" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="SoLanXem" class="control-label"></label>
-                <input asp-for="SoLanXem" class="form-control" />
-                <span asp-validation-for="SoLanXem" class="text-danger"></span>
+                <label>Trạng thái</label>
+                <select asp-for="SanPhamMoi" class="form-control">
+                    <option value="1">Sản phẩm mới</option>
+                    <option value="0">Sản phẩm cũ</option>
+                </select>
             </div>
-            <div class="form-group">
-                <label asp-for="NgayTao" class="control-label"></label>
-                <input asp-for="NgayTao" class="form-control" />
-                <span asp-validation-for="NgayTao" class="text-danger"></span>
+        </div>
+
+        <div class="image-section">
+            <h4>Ảnh sản phẩm</h4>
+
+            <label class="upload-box">
+                Đổi ảnh mới
+                <input type="file" name="ImageFile" accept="image/*" hidden onchange="previewImage(event)" />
+            </label>
+
+            @{
+                string imagePath = string.IsNullOrEmpty(Model.Hinh)
+                ? "/images/no-image.png"
+                : "/images/products/" + Model.Hinh;
+            }
+
+            <img id="preview" src="@imagePath" style="display:block;" />
+
+            <button type="submit" class="btn-submit">
+                💾 Lưu thay đổi
+            </button>
+
+            <div style="margin-top: 15px;">
+                <a asp-action="Index" style="text-decoration:none; color: #555;">← Hủy bỏ</a>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+        </div>
+
+    </form>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+@section Styles {
+    <style>
+        .page-center {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .product-form {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            max-width: 1100px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-section {
+            flex: 2;
+        }
+
+        .image-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .upload-box {
+            display: block;
+            border: 2px dashed #ccc;
+            padding: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #555;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        .upload-box:hover {
+            border-color: #007bff;
+            color: #007bff;
+            background: #f0f8ff;
+        }
+
+        #preview {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-submit {
+            padding: 12px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #0056b3;
+        }
+
+        body {
+            background: #f6f7fb;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .page-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 30px 5%;
+            color: #333;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: block;
+            color: #444;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-control,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #dcdfe6;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .text-danger {
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: block;
+        }
+    </style>
+}
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function previewImage(event) {
+            const img = document.getElementById("preview");
+            if (event.target.files && event.target.files[0]) {
+                // Tạo URL tạm thời cho ảnh mới chọn để xem trước
+                img.src = URL.createObjectURL(event.target.files[0]);
+                img.style.display = "block";
+            }
+        }
+    </script>
 }
